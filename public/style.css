@@ -1,0 +1,1697 @@
+/* =========================================================
+ 🎨 BIẾN MÀU TOÀN CỤC
+========================================================= */
+:root {
+  --primary-color: #8B4513; /* Brown Saddle */
+  --secondary-color: #D2B48C; /* Tan */
+  --background-color: #f1cf93e8; /* Wheat */
+  --text-color: #3D2B1F; /* Dark Brown */
+  --light-bg: #FFF8E7;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --font-family: 'Quicksand', sans-serif;
+}
+
+/* =========================================================
+ 🧱 CƠ BẢN CHO TOÀN TRANG
+========================================================= */
+body {
+  /* Nền nâu ấm pha ánh vàng loang trung tâm */
+  background-color: #5C2F0C;
+  background-image:
+    radial-gradient(ellipse at center, rgba(255, 215, 0, 0.25), transparent 70%),
+    radial-gradient(ellipse at center, #6B3F1B, #5C2F0C);
+  background-attachment: fixed; /* Giữ nền cố định khi cuộn */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-family);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   ✨ MỚI: THƯỚC PHIM CHÉO Ở GÓC MÀN HÌNH
+========================================================= */
+.film-strip-banner {
+  /* --- Định vị và xoay chéo --- */
+  position: fixed;
+  top: 60px;                  /* THAY ĐỔI: Nhích xuống một chút (từ 60px lên 80px) */
+  right: -200px;               /* THAY ĐỔI: Điều chỉnh lại cho cân xứng với chiều rộng mới */
+  transform: rotate(35deg);
+  
+  /* --- Kích thước và hiển thị --- */
+  width: 700px;               /* THAY ĐỔI: Làm dài ra (từ 600px lên 800px) */
+  z-index: 10;
+  overflow: hidden;
+  
+  /* --- Trang trí --- */
+  background-color: #2c2c2c;
+  padding: 6px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  
+  /* --- Căn chỉnh nội dung bên trong --- */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kiểu cho các lỗ phim trên và dưới */
+.perforations {
+  height: 12px;
+  background-color: #1a1a1a;
+  /* Dùng gradient để tạo các ô vuông lặp lại, giả lập lỗ phim */
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 8px,
+    #f0f0f0 8px,
+    #f0f0f0 12px
+  );
+}
+
+/* Khung chứa các hình ảnh chuyển động */
+.film-strip-track {
+  display: flex; /* Sắp xếp các ảnh nằm ngang */
+  width: fit-content; /* Chiều rộng bằng tổng chiều rộng các ảnh */
+  animation: slideFilm 30s linear infinite; /* Áp dụng hiệu ứng chuyển động */
+}
+
+/* Kiểu cho từng ảnh */
+.film-strip-track img {
+  height: 90px;
+  width: auto;
+  margin: 0 8px; /* Khoảng cách giữa các ảnh */
+  border: 4px solid #fff; /* Tạo khung trắng cho ảnh */
+  background-color: #fff; /* Nền trắng phòng khi ảnh load lỗi */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.3); /* Bóng đổ vào bên trong ảnh */
+}
+
+/* Định nghĩa animation @keyframes */
+@keyframes slideFilm {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+/* =========================================================
+ 🏠 MENU & LOBBY
+========================================================= */
+#ui-container {
+  /* --- Các thuộc tính cũ giữ nguyên --- */
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--light-bg);
+  box-sizing: border-box; /* Thêm để padding không ảnh hưởng kích thước */
+
+  /* === THÊM CÁC THUỘC TÍNH MỚI ĐỂ CĂN GIỮA === */
+  display: flex;              /* 1. Kích hoạt Flexbox */
+  flex-direction: column;     /* 2. Sắp xếp các mục theo chiều dọc */
+  justify-content: center;    /* 3. Căn giữa theo chiều dọc (quan trọng nhất) */
+  align-items: center;        /* 4. Căn giữa theo chiều ngang (đảm bảo) */
+}
+
+#ui-container::-webkit-scrollbar {
+  width: 8px;
+}
+#ui-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3.5rem; /* Thay đổi: Tăng kích thước từ 2.5rem lên 3.5rem */
+  color: var(--primary-color);
+  text-align: center; /* Thêm: Đảm bảo tiêu đề luôn được căn giữa */
+  margin-bottom: 10px; /* Thêm: Điều chỉnh khoảng cách với dòng mô tả bên dưới */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 20px; /* Thêm: Tăng khoảng cách từ khối tiêu đề đến các nút bên dưới */
+}
+
+
+/* =========================================================
+ 🔘 NÚT BẤM CHUNG
+========================================================= */
+button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #65340d;
+  transform: translateY(-3px);
+}
+#startBtn {
+  background-color: var(--success-color);
+}
+#startBtn:hover {
+  background-color: #218838;
+}
+
+/* ===================================================================
+   🌟 CHỦ ĐỀ TỐI CHO MENU CHÍNH - PHIÊN BẢN "HẦM VÀNG RỰC RỠ"
+=================================================================== */
+
+/* --- 1. Nền Nâu Ấm Áp Hơn với Hiệu ứng Loang Vàng --- */
+body.page-menu {
+  /* ✨ Nền nâu-gỗ ấm áp hơn, không còn quá tối */
+  background-color: #5C2F0C; 
+  /* ✨ Hiệu ứng loang của ÁNH VÀNG tỏa ra từ trung tâm */
+  background-image: 
+    radial-gradient(ellipse at center, rgba(255, 215, 0, 0.25), transparent 70%),
+    radial-gradient(ellipse at center, #6B3F1B, #5C2F0C);
+  
+ 
+}
+
+
+/* --- 2. Tiêu Đề "Chữ Vàng Phát Sáng" (Giữ nguyên, vẫn rất hiệu quả) --- */
+body.page-menu header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #FFD700;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 15px #FFD700,
+    0 0 25px #FB8500;
+}
+
+body.page-menu header .subtitle {
+  color: #fff8dc; /* Màu vàng nhạt gần trắng, dễ đọc hơn */
+  font-weight: 500;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(255, 215, 0, 0.8);
+}
+
+
+/* --- 3. Nút Bấm "Thỏi Vàng" - Rắn Chắc và Sáng Bóng (Giữ nguyên) --- */
+body.page-menu button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  /* Nền gradient vàng ròng, tạo cảm giác kim loại */
+  background: linear-gradient(160deg, #FFD700, #E0A800);
+  /* Chữ màu nâu sẫm để tương phản tuyệt đối trên nền vàng */
+  color: #3D2B1F;
+  font-weight: 700;
+  text-shadow: none;
+  
+  border: none;
+  border-radius: 10px;
+  
+  /* Hiệu ứng 3D tinh xảo */
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.page-menu button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 25px rgba(255, 215, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.page-menu button:active {
+  transform: translateY(0px);
+  filter: brightness(1);
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+/* =========================================================
+ 💬 LOBBY: DANH SÁCH NGƯỜI CHƠI & MÃ PHÒNG
+========================================================= */
+
+body.page-lobby .card {
+  background: var(--light-bg);
+  border: 4px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  margin: 30px auto;
+  max-width: 1000px;
+  width: 95%;
+}
+
+
+#roomInfo {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin: 10px auto 30px;
+  display: inline-block;
+  border: 4px solid var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+}
+
+#players-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#players-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#player-count {
+  background-color: var(--success-color);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+#players-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px;
+  background-color: #e9d8b9;
+  border-radius: 8px;
+}
+
+.player-card {
+  background-color: #fff;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+ 🧩 FORM THAM GIA PHÒNG (bản chữ đậm hơn)
+========================================================= */
+.form-group {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.15rem; /* to hơn nhẹ */
+  font-family: var(--font-family);
+  font-weight: 600; /* 🔹 chữ đậm hơn */
+  color: #3b2b1f; /* nâu đậm hơn, dễ đọc hơn */
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #fffef8; /* nền trắng ngà mềm mắt */
+}
+
+.form-group input::placeholder {
+  color: #8b6f4e; /* màu placeholder dịu, không mờ quá */
+  font-weight: 500;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.4);
+  background-color: #fffdfa; /* sáng nhẹ khi focus */
+}
+
+/* Đoạn mô tả trong modal */
+#joinRoomModal .modal-content p {
+  margin-bottom: 20px;
+  opacity: 0.95; /* rõ hơn */
+  font-weight: 500; /* đậm nhẹ */
+  color: #4b3521;
+}
+
+/* Nền modal */
+.join-modal {
+  background: var(--light-bg);
+  border: 3px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease-out;
+  position: relative;
+}
+
+/* Nút đóng */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #8B4513;
+  background: #f2e4c5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.close-btn:hover {
+  background: #f8d8b4;
+  color: #5c2f0c;
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.close-btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   🎮 GAME CONTAINER & CANVAS
+========================================================= */
+#game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #a8d587; /* Nền cỏ */
+}
+
+
+/* =========================================================
+   ✨ HUD TRONG GAME - PHIÊN BẢN SỬA LỖI ✨
+========================================================= */
+/* Cụm HUD mới cho góc trên bên phải */
+#hud-top-right {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  z-index: 900;
+}
+
+/* Các style cho .hud-box và ô điểm số giữ nguyên */
+.hud-box {
+  background: rgba(110, 57, 24, 0.8);
+  border: 3px solid #f1cf93;
+  border-radius: 12px;
+  /* ✨ THÊM 1: Thêm transition để mọi hiệu ứng đều mượt mà */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  pointer-events: all;
+}
+
+#hud-score span:first-child {
+  font-size: 1.5rem;
+}
+
+
+#toggleLeaderboardBtn {
+  cursor: pointer;
+  
+  /* ✨ THÊM 2: Áp dụng hiệu ứng tỏa sáng */
+  animation: subtle-glow 3s infinite ease-in-out;
+}
+
+/* Hiệu ứng khi di chuột (Hover) - Nâng cấp */
+#toggleLeaderboardBtn:hover {
+  transform: translateY(-3px); /* Nhấc nút lên cao hơn một chút */
+  box-shadow: 0 7px 15px rgba(0,0,0,0.5); /* Bóng đổ to hơn, tạo cảm giác "lơ lửng" */
+}
+
+/* ✨ THÊM 3: Hiệu ứng khi nhấn xuống (Active) */
+#toggleLeaderboardBtn:active {
+  transform: translateY(1px); /* Lún nút xuống */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Bóng đổ thu lại, tạo cảm giác bị đè xuống */
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Làm hiệu ứng nhấn nhanh hơn */
+}
+
+
+/* Style cho icon 🏆 bên trong */
+#toggleLeaderboardBtn button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+/* Hiệu ứng hover cho icon (giữ nguyên) */
+#toggleLeaderboardBtn:hover button {
+  transform: scale(1.15);
+}
+
+/* Hiệu ứng active cho icon */
+#toggleLeaderboardBtn:active button {
+  transform: scale(1.05); /* Thu nhỏ icon lại một chút khi nhấn */
+}
+
+
+/* ✨ THÊM 4: Định nghĩa Keyframes cho hiệu ứng tỏa sáng */
+@keyframes subtle-glow {
+  0% {
+    /* Trạng thái bình thường, có thêm 1 lớp bóng mờ màu vàng */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4), 0 0 5px rgba(241, 207, 147, 0.3);
+  }
+  50% {
+    /* Trạng thái sáng nhất, lớp bóng vàng rực rỡ hơn */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4), 0 0 15px rgba(241, 207, 147, 0.7);
+  }
+  100% {
+    /* Quay về trạng thái bình thường */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4), 0 0 5px rgba(241, 207, 147, 0.3);
+  }
+}
+
+/* Thanh tiến độ (Không thay đổi) */
+#progress-container {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  background: rgba(110, 57, 24, 0.8);
+  border: 3px solid #f1cf93;
+  border-radius: 12px;
+  height: 40px;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  z-index: 901; 
+}
+#progress-icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+#progress-bar-wrapper {
+  flex-grow: 1;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #ffb347);
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+}
+#progress-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  margin: 0 15px;
+}
+
+/* =========================================================
+   🏆 BẢNG XẾP HẠNG TRONG GAME 
+========================================================= */
+.leaderboard-panel {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 280px;
+  background: #fdf5e6; /* Màu giấy da */
+  border: 4px solid #8B4513; /* Viền gỗ */
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  z-index: 999;
+  font-family: 'Quicksand', sans-serif;
+  transform-origin: top right;
+  animation: fadeIn 0.3s ease-out;
+}
+.panel-header {
+  background-color: #8B4513;
+  color: #fdf5e6;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: -4px -4px 0 -4px; /* Dính vào viền */
+}
+.panel-header h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.leaderboard-panel ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.leaderboard-panel li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px dashed #c8bca8;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.leaderboard-panel li:last-child {
+  border-bottom: none;
+}
+.leaderboard-panel li:nth-child(1) {
+  font-weight: 700;
+  color: #c78d0a;
+}
+/* Tùy chỉnh thanh cuộn */
+.leaderboard-panel ul::-webkit-scrollbar { width: 8px; }
+.leaderboard-panel ul::-webkit-scrollbar-track { background: #e9d8b9; }
+.leaderboard-panel ul::-webkit-scrollbar-thumb { background: #8B4513; border-radius: 4px; }
+/* =========================================================
+   🚫 Ẩn BXH cho người chơi thường (non-host)
+========================================================= */
+body.is-player #toggleLeaderboardBtn,
+body.is-player #toggleLeaderboardBtn button,
+body.is-player #leaderboardPanel {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0) !important;
+}
+
+
+/* =========================================================
+   📜 MODAL THÔNG TIN & CÂU HỎI - PHIÊN BẢN NÂNG CẤP "CUỘN GIẤY CỔ"
+========================================================= */
+
+/* Lớp nền mờ phía sau */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Làm tối hơn một chút */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+
+}
+
+/* Khung cuộn giấy chính */
+.modal-scroll {
+  width: 90%;
+  max-width: 800px; /* Tăng chiều rộng để nội dung thoải mái hơn */
+  max-height: 90vh; /* Tăng chiều cao tối đa */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  /* Chất liệu giấy cổ */
+  background-color: #fdf5e6; /* Màu giấy da */
+  
+  /* Hiệu ứng bóng đổ tạo chiều sâu */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+
+  /* Bỏ border và border-radius cũ để tạo hình dạng cuộn giấy mới */
+}
+
+/* === ✨ MỚI: Thêm 2 đầu cuộn giấy trên và dưới === */
+.modal-scroll::before,
+.modal-scroll::after {
+  content: '';
+  position: absolute;
+  left: -20px; /* Nhô ra ngoài một chút */
+  width: calc(100% + 40px);
+  height: 35px;
+  background: #c08c4a; /* Màu gỗ/giấy cuộn sẫm */
+  border: 4px solid #8B4513; /* Viền gỗ */
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.modal-scroll::before {
+  top: -20px; /* Đặt ở cạnh trên */
+}
+
+.modal-scroll::after {
+  bottom: -20px; /* Đặt ở cạnh dưới */
+}
+
+
+/* Vùng chứa nội dung có thể cuộn */
+.scroll-content {
+  color: var(--text-color, #3D2B1F);
+  overflow-y: auto;
+  padding: 40px 60px; /* Tăng padding cho thoáng */
+  
+  /* Thêm lớp giấy da thật hơn (tùy chọn, cần có ảnh) */
+  /* background-image: url('path/to/parchment-texture.png'); */
+  
+  /* Thêm bóng đổ bên trong để tạo cảm giác giấy lõm vào */
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.15);
+  background-color: #fdf5e6; /* Nền giấy */
+  position: relative;
+  z-index: 2; /* Nằm trên 2 đầu cuộn giấy */
+}
+
+/* Tùy chỉnh thanh cuộn */
+.scroll-content::-webkit-scrollbar {
+  width: 12px;
+}
+.scroll-content::-webkit-scrollbar-track {
+  background: rgba(139, 69, 19, 0.1);
+}
+.scroll-content::-webkit-scrollbar-thumb {
+  background-color: #c08c4a;
+  border-radius: 10px;
+  border: 2px solid #fdf5e6;
+}
+
+/* Tiêu đề "Thông Tin Kho Báu" */
+.scroll-content h3 {
+  font-family: 'Playfair Display', serif; /* Font chữ cổ điển, sang trọng */
+  font-size: 2.5rem; /* To và ấn tượng hơn */
+  color: #5c3d2b; /* Nâu sẫm */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+#quizBox .scroll-content h3 {
+  font-family: 'Poppins', 'Roboto', sans-serif; /* Font dễ đọc, hiện đại */
+  font-size: 1.6rem;             /* vừa tầm mắt, không quá to */
+  font-weight: 600;              /* đậm vừa phải, rõ ràng */
+  color: #4b2a0b;                /* nâu trầm hài hòa với nền giấy */
+  text-align: center;            /* căn giữa toàn bộ câu hỏi */
+  line-height: 1.5;              /* khoảng cách dòng thoáng hơn */
+  margin: 0 0 25px 0;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.25); /* ánh vàng nhẹ */
+  padding: 0 30px;               /* thêm khoảng trống 2 bên cho đẹp */
+  letter-spacing: 0.5px;         /* giãn nhẹ chữ cho dễ nhìn */
+}
+
+/* Đoạn văn bản thông tin */
+.scroll-content p {
+  font-family: 'Roboto', sans-serif; /* Font dễ đọc cho nội dung dài */
+  font-size: 1.15rem;
+  line-height: 1.8;
+  text-align: justify; /* Căn đều 2 bên cho cảm giác trang trọng như sách */
+  margin-bottom: 25px;
+}
+
+
+
+/* Nút bấm "Giải đố ngay" */
+.scroll-content button {
+  display: block;
+  margin: 30px auto 10px;
+  flex-shrink: 0;
+  background: #a0522d; /* Màu nâu đất son */
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 4px solid #65340d;
+  transition: all 0.2s ease;
+}
+.scroll-content button:hover {
+  background: #b86a3b;
+  transform: translateY(-3px);
+  border-bottom-width: 6px;
+}
+.scroll-content button:active {
+  transform: translateY(1px);
+  border-bottom-width: 2px;
+}
+
+/* 🎯 Hiệu ứng chọn đáp án (Giữ nguyên, vẫn rất hợp) */
+#answerOptions {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+#answerOptions li {
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: rgba(139, 69, 19, 0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  color: #5c3d2b;
+  font-size: 1.1rem;
+}
+#answerOptions li:hover {
+  background: rgba(139, 69, 19, 0.15);
+  border-color: #c08c4a;
+  transform: translateX(5px);
+}
+#answerOptions li.correct {
+  background: #28a745;
+  color: white;
+  border-color: #1e7e34;
+  transform: scale(1.02);
+}
+#answerOptions li.wrong {
+  background: #dc3545;
+  color: white;
+  border-color: #b21f2d;
+  animation: shake 0.5s; /* Thêm hiệu ứng rung khi sai */
+}
+#answerOptions li.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Thêm animation rung lắc khi chọn sai */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+  20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+/* =========================================================
+   💫 HIỆU ỨNG ĐIỂM SỐ
+========================================================= */
+#score-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: 0 0 15px #ffd700;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+#score-popup.show {
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+
+
+/* ===================================================================
+   🏆 BẢNG VINH DANH - NGOÀI CỔ, TRONG HIỆN ĐẠI 🏆
+=================================================================== */
+body.page-leaderboard {
+  background-color: #5C2F0C; 
+  background-image: 
+    radial-gradient(ellipse at center, rgba(255, 215, 0, 0.25), transparent 70%),
+    radial-gradient(ellipse at center, #6B3F1B, #5C2F0C);
+ 
+}
+/* 🏆 Bảng Xếp Hạng có ánh vàng */
+#leaderboard.card {
+  background: linear-gradient(180deg, #fdf5e6 0%, #fffaf0 100%);
+  border: none;
+  border-radius: 20px;
+
+  /* 💫 Thêm ánh sáng vàng quanh bảng */
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, 0.45),  /* ánh sáng vàng lan nhẹ */
+    0 10px 30px rgba(0, 0, 0, 0.4),    /* bóng đổ dưới bảng */
+    inset 0 0 15px rgba(255, 245, 180, 0.3); /* phản sáng trong bảng */
+
+  max-width: 70vw;
+  width: 70%;
+  margin: 8vh auto;
+  padding: 50px 70px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✨ Hai đầu cuộn giấy cũng có ánh vàng nhẹ để khớp bảng */
+#leaderboard.card::before,
+#leaderboard.card::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  width: 108%;
+  height: calc(100% + 30px);
+  background: linear-gradient(180deg, #c08c4a 0%, #b5742b 85%);
+  border: 6px solid #8B4513;
+  border-radius: 20px;
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.4),   /* ánh sáng vàng quanh ống cuộn */
+    inset 0 2px 3px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+#leaderboard.card::before { left: -40px; }
+#leaderboard.card::after { right: -40px; }
+
+
+/* TIÊU ĐỀ */
+#leaderboard h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #5c3d2b;
+    margin: 0 auto 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px double #c08c4a;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}
+
+
+/* NỘI DUNG BÊN TRONG - PHONG CÁCH HÀI HÒA */
+#leaderboard #scores {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: rank 3;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Mỗi dòng trong danh sách */
+#leaderboard #scores li {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    background-color: rgba(255,255,255,0.75);
+    border: 2px solid #c8bca8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#leaderboard #scores li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Icon / số thứ tự */
+#leaderboard #scores li::before {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Hạng 1 */
+#leaderboard #scores li:nth-child(1) {
+    order: 1;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #4a3728;
+    border-color: #e6b800;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 15px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+    position: relative;
+}
+#leaderboard #scores li:nth-child(1)::before { content: '🥇'; }
+#leaderboard #scores li:nth-child(1)::after {
+    content: '👑';
+    position: absolute;
+    top: -34px;
+    right: -28px;
+    font-size: 2.2rem;
+    transform: rotate(15deg);
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+}
+
+/* Hạng 2 */
+#leaderboard #scores li:nth-child(2) {
+    background: linear-gradient(45deg, #C0C0C0, #E8E8E8);
+    color: #333;
+    border-color: #b0b0b0;
+}
+#leaderboard #scores li:nth-child(2)::before { content: '🥈'; }
+
+/* Hạng 3 */
+#leaderboard #scores li:nth-child(3) {
+    background: linear-gradient(45deg, #cd7f32, #a0522d);
+    color: #fff;
+    border-color: #8c5a2b;
+}
+#leaderboard #scores li:nth-child(3)::before { content: '🥉'; }
+#leaderboard #scores li:nth-child(3) .player-score {
+    color: #fff;
+    background-color: rgba(0,0,0,0.25);
+}
+
+/* Các hạng khác */
+#leaderboard #scores li:nth-child(n+4)::before {
+    counter-increment: rank;
+    content: counter(rank);
+    color: #8B4513;
+    background-color: #e9d8b9;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+}
+
+/* Tên và điểm */
+.player-name { text-align: left; }
+.player-score {
+    font-weight: 700;
+    color: #8B4513;
+    background-color: rgba(255,255,255,0.6);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Nút Chơi Lại */
+#leaderboard button {
+    margin-top: 35px;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(180deg, #34a853 0%, #2e8b47 100%);
+    color: #fff;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 5px solid #1e7e34;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+#leaderboard button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+#leaderboard button:active {
+    transform: translateY(1px);
+    border-bottom-width: 2px;
+}
+
+/* Ẩn banner và header khi hiển thị bảng */
+body.show-leaderboard header,
+body.show-leaderboard .film-strip-banner {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+/* =========================================================
+ ✨ HIỆU ỨNG CHUNG
+========================================================= */
+.hidden {
+  display: none !important;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* =========================================================
+   📜 MÀN HÌNH Ý NGHĨA - PHONG CÁCH BẢO TÀNG HIỆN ĐẠI
+========================================================= */
+
+/* Lớp phủ nền chính */
+#map-end-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🔧 Bổ sung để luôn nằm trên lớp mờ */
+  z-index: 3100;
+  pointer-events: none; /* ẩn click khi chưa show */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+/* Kích hoạt hiển thị */
+#map-end-screen.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+/* Khung nội dung chính */
+.map-end-overlay {
+  background-color: #1a1a1d; /* Nền charcoal, gần như đen */
+  color: #f0f0f0; /* Màu chữ trắng ngà, dễ chịu cho mắt */
+  width: 90%;
+  max-width: 850px;
+  height: 90vh;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Vùng nội dung cuộn được */
+.map-end-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 20px;
+  margin-right: -20px; /* Bù lại padding để thanh cuộn không chiếm diện tích */
+}
+
+/* Tiêu đề chính */
+.map-end-scroll h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #E0A800; /* Màu vàng gold sang trọng */
+  margin: 0 0 25px 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* Đường kẻ trang trí dưới tiêu đề */
+.map-end-scroll h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #E0A800;
+  opacity: 0.5;
+}
+
+/* Đoạn văn bản */
+.map-end-scroll p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.map-end-scroll p b {
+  color: #E0A800; /* Nhấn mạnh từ khóa bằng màu vàng */
+  font-weight: 700;
+}
+.map-end-scroll p i {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 30px 0;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hình ảnh */
+.map-end-scroll img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 25px auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Nút bấm */
+#continueMapBtn {
+  background: #E0A800;
+  color: #1a1a1d;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 25px;
+  align-self: center; /* Căn giữa nút trong flex container */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#continueMapBtn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* Tùy chỉnh thanh cuộn cho hợp tone */
+.map-end-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.map-end-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+.map-end-scroll::-webkit-scrollbar-thumb {
+  background-color: #E0A800;
+  border-radius: 5px;
+  border: 2px solid #1a1a1d;
+}
+.map-end-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #ffc107;
+}
+
+/* =========================================================
+   ✨ CẢI TIẾN CHO GIAI ĐOẠN TIMELINE & ẢNH
+========================================================= */
+
+/* Tiêu đề phụ từng mốc (h3) */
+.map-end-scroll h3 {
+ 
+  font-size: 1.5rem;
+  color: #FFD54F;
+  margin: 25px 0 15px;
+  border-left: 4px solid #E0A800;
+  padding-left: 12px;
+}
+
+/* Danh sách li */
+.map-end-scroll ul {
+  margin: 10px 0 20px 30px;
+}
+.map-end-scroll ul li {
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* Lưới ảnh nhiều tấm */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 15px 0;
+}
+.img-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+}
+
+/* Khoảng cách đoạn cuối cùng */
+.map-end-scroll p:last-child {
+  margin-bottom: 50px;
+}
+
+/* Responsive - thu nhỏ padding, font khi màn hình nhỏ */
+@media (max-width: 768px) {
+  .map-end-overlay {
+    padding: 25px;
+  }
+  .map-end-scroll h2 {
+    font-size: 2rem;
+  }
+  .map-end-scroll h3 {
+    font-size: 1.3rem;
+  }
+  .map-end-scroll p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===================================================================
+   ✨ GIAO DIỆN LOBBY - PHIÊN BẢN "TRANG CUỘN TRUNG TÂM"
+=================================================================== */
+
+/* --- Ẩn các yếu tố không cần thiết ở lobby --- */
+body.page-lobby header,
+body.page-lobby #main-menu,
+body.page-lobby .film-strip-banner {
+  display: none !important;
+}
+body.page-lobby {
+  background-color: #5C2F0C; 
+  background-image: 
+    radial-gradient(ellipse at center, rgba(255, 215, 0, 0.25), transparent 70%),
+    radial-gradient(ellipse at center, #6B3F1B, #5C2F0C);
+}
+body.page-lobby #menu.card {
+  background: none; border: none; box-shadow: none; padding: 0;
+}
+
+/* --- Bố cục tổng thể trang Lobby --- */
+body.page-lobby #ui-container {
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 8vh 20px;
+}
+
+/* ✨✨✨ THAY ĐỔI DUY NHẤT NẰM Ở ĐÂY ✨✨✨ */
+/* --- Tùy chỉnh thanh cuộn cho CẢ TRANG --- */
+body.page-lobby #ui-container::-webkit-scrollbar {
+  width: 12px;
+}
+body.page-lobby #ui-container::-webkit-scrollbar-thumb {
+  /* Nền màu vàng sáng */
+  background: #FFB703;
+  border-radius: 10px;
+  /* Viền vàng rực rỡ */
+  border: 2px solid #FFD700;
+}
+body.page-lobby #ui-container::-webkit-scrollbar-track {
+  /* Rãnh cuộn màu nâu sẫm để làm nổi bật thanh cuộn */
+  background: #3D2B1F;
+}
+/* ✨✨✨ KẾT THÚC THAY ĐỔI ✨✨✨ */
+
+/* --- Khối Lobby chính --- */
+body.page-lobby #lobby {
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: -100px;
+}
+
+/* --- Bảng Mã Phòng --- */
+body.page-lobby #roomInfo {
+  position: relative;
+  top: -50px;
+  background: #c6713c;
+  color: #fff;
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+  padding: 28px 70px;
+  border-radius: 18px;
+
+  /* 🟤 Giữ nguyên viền gốc */
+  border: 5px solid var(--secondary-color);
+
+  /* ✨ Thêm bóng vàng tỏa sáng nhẹ bên ngoài */
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, 0.65),   /* ánh sáng vàng dịu xung quanh */
+    0 8px 25px rgba(0, 0, 0, 0.35);     /* bóng đổ dưới nền */
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5px;
+}
+
+
+
+/* --- Khung Điều Khiển Chính --- */
+body.page-lobby #players-container {
+  order: 2; width: 90%; max-width: 800px; position: relative;
+  background-color: #fdf5e6;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4), inset 0 0 25px rgba(0,0,0,0.15);
+  padding: 40px 60px; padding-bottom: 80px;
+}
+/* Đầu cuộn giấy */
+body.page-lobby #players-container::before,
+body.page-lobby #players-container::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  height: calc(100% + 40px);
+  width: 35px;
+  background: #c08c4a;
+  border: 4px solid #8B4113;
+  border-radius: 20px;
+
+  /* 💫 Thêm hiệu ứng bóng vàng */
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.4),  /* ánh vàng tỏa ra nhẹ */
+    inset 0 0 10px rgba(255, 240, 180, 0.4), /* phản sáng bên trong */
+    0 5px 10px rgba(0, 0, 0, 0.3);    /* bóng đổ cũ giữ lại */
+
+  z-index: -1;
+}
+
+body.page-lobby #players-container::before { left: -20px; }
+body.page-lobby #players-container::after { right: -20px; }
+
+/* Tiêu đề "Người chơi" */
+body.page-lobby #players-container h3 {
+  font-family: 'Playfair Display', serif; font-size: 2rem;
+  color: #5c3d2b; text-align: center; margin-bottom: 25px;
+}
+
+/* Vùng danh sách người chơi */
+#players-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 150px;
+  background-color: rgba(223, 205, 169, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Nút Bắt Đầu */
+#startBtn {
+  position: absolute; bottom: 0; left: 50%;
+  transform: translate(-50%, 50%); width: auto; height: auto;
+  font-size: 1.5rem; padding: 18px 60px; border-radius: 20px;
+  background: linear-gradient(180deg, #34a853 0%, #2e8b47 100%);
+  border: none; border-bottom: 8px solid #1e7e34;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  text-transform: uppercase; letter-spacing: 1px;
+  color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+#startBtn:hover {
+  filter: brightness(1.1);
+  transform: translate(-50%, calc(50% - 5px));
+}
+#startBtn:active {
+  transform: translate(-50%, calc(50% + 2px));
+  border-bottom-width: 4px;
+}
+
+/* === PHƯƠNG ÁN 3: THỎI VÀNG CAO CẤP === */
+.player-card {
+  /* Nền gradient vàng ròng, sáng bóng */
+  background: linear-gradient(160deg, #FFD700, #E0A800);
+  
+  /* Chữ màu nâu sẫm, tương phản tuyệt đối */
+  color: #3D2B1F;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3); /* Ánh sáng nhẹ trên chữ */
+  
+  border: none; /* Bỏ viền cũ */
+  border-radius: 10px;
+  padding: 14px 28px; /* Tăng padding một chút */
+  font-weight: 700;
+  
+  /* Hiệu ứng 3D tinh xảo với nhiều lớp bóng đổ */
+  box-shadow: 
+    /* Ánh sáng cạnh trên */
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    /* Bóng đổ cạnh dưới */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2),
+    /* Bóng đổ chính dưới nền */
+    0 5px 10px rgba(0, 0, 0, 0.25);
+    
+  transition: all 0.3s ease;
+}
+
+.player-card:hover {
+  /* Nâng thẻ lên và tỏa sáng */
+  transform: translateY(-4px);
+  filter: brightness(1.1); /* Sáng hơn một chút */
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2),
+    /* Bóng đổ to hơn và thêm quầng sáng vàng */
+    0 8px 18px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 215, 0, 0.5); 
+}
+/* =========================================================
+   ✨ ẨN THƯỚC PHIM KHI VÀO GAME
+========================================================= */
+.film-strip-banner {
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+body.page-game .film-strip-banner {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#fade-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.6s ease, background 0.6s ease;
+  z-index: 2980;
+  pointer-events: none;
+}
+#fade-overlay.visible {
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+
+/* =========================================================
+   📰 GÓC BÁO CHÍ & CHÍNH SÁCH - PHIÊN BẢN TIÊU ĐỀ TRÊN ẢNH
+========================================================= */
+#news-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  margin: 60px auto;
+  padding: 40px 50px;
+  border-radius: 20px;
+  background: #fdf5e6;
+  border: 4px solid #c08c4a;
+  box-shadow: 
+    0 10px 35px rgba(0,0,0,0.2),
+    0 0 25px rgba(255, 215, 0, 0.3);
+  max-width: 1200px;
+  width: 95%;
+}
+#news-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tiêu đề chính của khu vực */
+#news-section .section-header {
+  margin-bottom: 30px;
+}
+#news-section h2 {
+  text-align: center;
+  color: #5c3d2b;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0 0 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#news-section .section-desc {
+  text-align: center;
+  color: #6d5b4a;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Khung chứa carousel */
+.news-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  gap: 20px;
+}
+
+
+/* === ✨✨ THAY ĐỔI CHÍNH BẮT ĐẦU TỪ ĐÂY ✨✨ === */
+
+
+/* Thẻ tin tức - 2 thẻ mỗi trang */
+.news-card {
+  flex: 0 0 calc((100% - 25px) / 2); /* Hiển thị 2 thẻ trên 1 hàng */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  height: 360px; /* giảm nhẹ cho cân */
+}
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+
+/* Khung chứa ảnh - Chỉnh để lấp đầy thẻ */
+.card-image-container {
+  width: 100%;
+  height: 100%; 
+}
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nội dung bên dưới ảnh - Chỉnh để nằm đè lên ảnh */
+.card-content {
+  /* Đặt nội dung nằm đè lên trên khung cha */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+  
+  /* Thêm lớp nền mờ để chữ dễ đọc */
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  
+  /* Bỏ các thuộc tính flex cũ */
+  display: block; 
+}
+.news-card h3 {
+  font-size: 1.2rem;
+  color: #FFFFFF; /* Đổi chữ thành màu trắng */
+  margin: 0 0 15px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Thêm bóng đổ cho chữ */
+}
+
+/* Nút "Đọc thêm" màu vàng */
+.read-more-btn {
+  display: inline-block;
+  background: linear-gradient(160deg, #FFD700, #E0A800);
+  color: #3D2B1F;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+.read-more-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+.read-more-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.read-more-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* === KẾT THÚC THAY ĐỔI === */
+
+
+/* Dấu chấm chuyển trang */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+.carousel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #c08c4a;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+.carousel-dots button:hover {
+  transform: scale(1.2);
+}
+.carousel-dots button.active {
+  background: #c08c4a;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 992px) {
+  .news-card {
+    flex: 0 0 calc((100% - 25px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  #news-section {
+    padding: 25px 20px;
+  }
+  .carousel-track {
+    gap: 15px;
+  }
+  .news-card {
+    flex: 0 0 100%;
+  }
+}
+
+

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- ========================================= -->
+    <!-- 🔹 THÔNG TIN CƠ BẢN CỦA TRANG WEB -->
+    <!-- ========================================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truy Tìm Kho Báu</title>
+
+    <!-- 🧩 Liên kết CSS & Font -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- ========================================= -->
+<!-- 🧭 BẮT ĐẦU PHẦN THÂN TRANG -->
+<!-- ========================================= -->
+<!-- ⚡ Mặc định khởi động ở chế độ menu -->
+<body class="page-menu">
+    <!-- ========================================= -->
+    <!-- ✨ THƯỚC PHIM CHÉO VỚI HÌNH ẢNH ✨ -->
+    <!-- ========================================= -->
+    <div class="film-strip-banner">
+        <!-- Lỗ phim phía trên -->
+        <div class="perforations"></div>
+
+        <!-- Dải chứa các hình ảnh sẽ chuyển động -->
+        <div class="film-strip-track">
+            <!-- ✨ BỘ ẢNH GỐC -->
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHHOvrl7BAo5KkGtV8u7Qva-VG20aWCiQbLOsmIJve9Wqx7bxtILY8tO-ycsXUMjZzaPUjaFeAk546cHfG29-t4w6mD7CuL1dY2MgQ2lpibTYtSZm3Hcr2g381qpykvo_k8uXuWS-fpsI/s1600/031-me1bb99t-khe1baa9u-c491e1bb99i-phc3a1o-te1baa1i-tre1baadn-c491e1bb8ba-phc3a1o-c491c3a0i-lc3a1ng-thc3a1ng-12-1946-e1baa3nh-tc6b0-lie1bb87u.jpg" alt="Cuộc chiến đấu 60 ngày đêm ở Hà Nội">
+            <img src="https://baoquankhu7.vn/fileman/Uploads/tbNews/5942/thumb/6.jpg" alt="Chiến dịch Việt Bắc Thu – Đông 1947">
+            <img src="https://images.hcmcpv.org.vn/res/news/2021/09/16-09-2021-chien-dich-bien-gioi-thu-dong-1950-buoc-tien-moi-cua-luc-luong-vu-trang-nhan-dan-viet-nam-61BE97FA.jpg" alt="Chiến dịch Biên giới Thu – Đông 1950">
+            <img src="https://cdn-i2.congthuong.vn/stores/news_dataimages/2024/052024/06/10/bien220240506101949.jpg?rt=20240506101950" alt="bàn kế hoạch mở Chiến dịch Điện Biên Phủ">
+            <img src="https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2024/5/2/2-1714615225796749686001.jpg" alt="Bộ đội ta xung phong">
+            <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2023/5/7/1189327/Chien-Thang-Dien-Bie.jpg" alt="Điện Biên Phủ">
+            
+            <!-- ✨ BỘ ẢNH SAO CHÉP (ĐỂ TẠO HIỆU ỨNG LẶP LẠI) -->
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHHOvrl7BAo5KkGtV8u7Qva-VG20aWCiQbLOsmIJve9Wqx7bxtILY8tO-ycsXUMjZzaPUjaFeAk546cHfG29-t4w6mD7CuL1dY2MgQ2lpibTYtSZm3Hcr2g381qpykvo_k8uXuWS-fpsI/s1600/031-me1bb99t-khe1baa9u-c491e1bb99i-phc3a1o-te1baa1i-tre1baadn-c491e1bb8ba-phc3a1o-c491c3a0i-lc3a1ng-thc3a1ng-12-1946-e1baa3nh-tc6b0-lie1bb87u.jpg" alt="Cuộc chiến đấu 60 ngày đêm ở Hà Nội">
+            <img src="https://baoquankhu7.vn/fileman/Uploads/tbNews/5942/thumb/6.jpg" alt="Chiến dịch Việt Bắc Thu – Đông 1947">
+            <img src="https://images.hcmcpv.org.vn/res/news/2021/09/16-09-2021-chien-dich-bien-gioi-thu-dong-1950-buoc-tien-moi-cua-luc-luong-vu-trang-nhan-dan-viet-nam-61BE97FA.jpg" alt="Chiến dịch Biên giới Thu – Đông 1950">
+            <img src="https://cdn-i2.congthuong.vn/stores/news_dataimages/2024/052024/06/10/bien220240506101949.jpg?rt=20240506101950" alt="bàn kế hoạch mở Chiến dịch Điện Biên Phủ">
+            <img src="https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2024/5/2/2-1714615225796749686001.jpg" alt="Bộ đội ta xung phong">
+            <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2023/5/7/1189327/Chien-Thang-Dien-Bie.jpg" alt="Điện Biên Phủ">
+        </div>
+
+        <!-- Lỗ phim phía dưới -->
+        <div class="perforations"></div>
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- 🎵 ÂM THANH NỀN VÀ HIỆU ỨNG ÂM THANH -->
+    <!-- ========================================= -->
+    <audio id="menuMusic" src="sounds/menu.mp3" loop></audio>
+    <audio id="gameMusic" src="sounds/game.mp3" loop></audio>
+    <audio id="correctSound" src="sounds/correct.mp3"></audio>
+    <audio id="wrongSound" src="sounds/wrong.mp3"></audio>
+
+    <!-- ========================================= -->
+    <!-- 🏠 GIAO DIỆN MENU CHÍNH & PHÒNG CHỜ -->
+    <!-- ========================================= -->
+    <div id="ui-container">
+
+        <!-- 🔸 Tiêu đề & mô tả -->
+        <header>
+            <h1>
+                <span class="header-icon">🎮</span>
+                Truy Tìm Kho Báu
+                <span class="header-icon">🏺</span>
+            </h1>
+            <p class="subtitle">Khám phá tri thức, săn tìm kho báu!</p>
+        </header>
+
+        <!-- 🔸 Thẻ bao chứa menu và phòng chờ -->
+        <div id="menu" class="card">
+
+            <!-- 🟢 MENU CHÍNH: Chọn tạo phòng hoặc tham gia -->
+            <div id="main-menu">
+                <button id="createBtn" onclick="createRoom()">🚀 Tạo phòng mới</button>
+                <button id="joinBtn" onclick="joinRoom()">🚪 Tham gia phòng</button>
+            </div>
+
+            <!-- 🔵 PHÒNG CHỜ (hiện sau khi tạo/nhập phòng) -->
+            <div id="lobby" class="hidden">
+                <!-- Hiển thị mã phòng -->
+                <p id="roomInfo"></p>
+
+                <!-- Danh sách người chơi -->
+                <div id="players-container">
+                    <h3>👥 Người chơi <span id="player-count">0</span></h3>
+                    <div id="players-list"></div>
+            
+
+                    <!-- Nút bắt đầu chỉ hiện cho host -->
+                    <button id="startBtn" class="hidden" onclick="startGame()">Bắt đầu trò chơi!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🏆 BẢNG XẾP HẠNG SAU KHI KẾT THÚC -->
+        <div id="leaderboard" class="card hidden">
+            <h2>🏆 Bảng Xếp Hạng 🏆</h2>
+            <ol id="scores"></ol>
+            <button onclick="window.location.reload()">🔁 Chơi lại</button>
+        </div>
+       
+        <!-- 📰 GÓC BÁO CHÍ & CHÍNH SÁCH VIỆT NAM (PHIÊN BẢN NÂNG CẤP) -->
+        <section id="news-section" class="card hidden">
+            <div class="section-header">
+                <h2>📰 Góc Báo Chí & Chính Sách 📰</h2>
+                <p class="section-desc">
+                    Các bài viết nổi bật phản ánh đường lối, chiến lược phát triển và hội nhập của Việt Nam trong thời đại mới.
+                </p>
+            </div>
+
+            <div class="news-carousel">
+                <div class="carousel-track" id="newsTrack">
+                    <!-- Mỗi bài viết -->
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://vnembassy-thehague.mofa.gov.vn/documents/d/guest/1-bl" alt="Đối ngoại Việt Nam">
+                        </div>
+                        <div class="card-content">
+                            <h3>Độc lập, tự chủ - Định hướng và nguyên tắc bất biến của đối ngoại Việt Nam</h3>
+                            <a href="https://vnembassy-thehague.mofa.gov.vn/vi/web/guest/tin-chi-tiet/chi-tiet/-doc-lap-tu-chu-dinh-huong-va-nguyen-tac-bat-bien-cua-doi-ngoai-viet-nam--139.html" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2025/10/16/1592977/Khcn-2.jpg" alt="Công nghệ Việt Nam">
+                        </div>
+                        <div class="card-content">
+                            <h3>Làm chủ công nghệ - Chìa khóa để Việt Nam bứt phá trong kỷ nguyên số</h3>
+                            <a href="https://laodong.vn/cong-nghe/lam-chu-cong-nghe-chia-khoa-de-viet-nam-but-pha-trong-ky-nguyen-so-1592977.ldo" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://www.quanlynhanuoc.vn/wp-content/uploads/2023/10/resized500-img_2021-12-12_1639316722.jpeg" alt="Đường lối đối ngoại">
+                        </div>
+                        <div class="card-content">
+                            <h3>Kiên định đường lối đối ngoại độc lập, tự chủ, đa dạng hóa, đa phương hóa quan hệ quốc tế</h3>
+                            <a href="https://www.quanlynhanuoc.vn/2023/10/24/kien-dinh-duong-loi-doi-ngoai-doc-lap-tu-chu-da-dang-hoa-da-phuong-hoa-quan-he-quoc-te/" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://vnembassy-thehague.mofa.gov.vn/documents/d/guest/1-bl" alt="Đối ngoại Việt Nam">
+                        </div>
+                        <div class="card-content">
+                            <h3>Tiếp nối thành quả to lớn của 80 năm trưởng thành cùng đất nước dưới sự lãnh đạo của Đảng, phát huy vai trò trong kỷ nguyên mới, kỷ nguyên vươn mình của dân tộc Việt Nam</h3>
+                            <a href="https://mofa.gov.vn/tin-chi-tiet/chi-tiet/doi-ngoai-viet-nam-tiep-noi-thanh-qua-to-lon-cua-80-nam-truong-thanh-cung-dat-nuoc-duoi-su-lanh-dao-cua-dang-phat-huy-vai-tro-trong-ky-nguyen-moi-ky-nguyen-vuon-minh-cua-dan-toc-viet-nam-47615-251.html?" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://www.tapchicongsan.org.vn/documents/20182/469816901/vna_potal_tong_bi_thu_to_lam_tham_chinh_thuc_ban_thu_ky_asean__7904152.jpg/fda0616a-60bc-4c28-ac90-267e7b492d63?t=1741605657000" alt="Ngoại giao đa phương">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ngoại giao đa phương đưa đất nước hội nhập toàn diện và sâu rộng trong thời đại mới</h3>
+                            <a href="https://www.tapchicongsan.org.vn/web/guest/quoc-phong-an-ninh-oi-ngoai1/-/2018/1064102/ngoai-giao-da-phuong-dua-dat-nuoc-hoi-nhap-toan-dien-va-sau-rong-trong-thoi-dai-moi.aspx?" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://bcp.cdnchinhphu.vn/thumb_w/777/Uploaded/hatheluc/2021_11_18/BAC_0693.jpg" alt="Hoàn thiện thể chế">
+                        </div>
+                        <div class="card-content">
+                            <h3>Chính phủ ưu tiên cao nhất cho xây dựng và hoàn thiện thể chế, tăng cường công khai, minh bạch</h3>
+                            <a href="https://baochinhphu.vn/chinh-phu-uu-tien-cao-nhat-cho-xay-dung-va-hoan-thien-the-che-tang-cuong-cong-khai-minh-bach-102304072.htm" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://bcp.cdnchinhphu.vn/Uploaded_VGP/buikieulien/20201204/resize_copy.jpg" alt="An ninh lương thực">
+                        </div>
+                        <div class="card-content">
+                            <h3>Bảo đảm an ninh lương thực quốc gia đến năm 2030</h3>
+                            <a href="https://vpcp.chinhphu.vn/bao-dam-an-ninh-luong-thuc-quoc-gia-den-nam-2030-11525147.htm" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_the_Communist_Party_of_Vietnam.svg/330px-Flag_of_the_Communist_Party_of_Vietnam.svg.png" alt="Nghị quyết số 36-NQ/TW">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nghị quyết số 36-NQ/TW ngày 22/10/2018, Hội nghị lần thứ tám Ban Chấp hành Trung ương Đảng (khóa XII)</h3>
+                            <a href="https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-36-nqtw-ngay-22102018-hoi-nghi-lan-thu-tam-ban-chap-hanh-trung-uong-dang-khoa-xii-ve-chien-luoc-phat-trien-ben-4810" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image-container">
+                            <img src="https://datafiles.chinhphu.vn/cpp/1/banner/svg.png" alt="Quyết định số 150/QĐ-TTg">
+                        </div>
+                        <div class="card-content">
+                            <h3>Quyết định số 150/QĐ-TTg của Thủ tướng Chính phủ: Phê duyệt Chiến lược phát triển nông nghiệp và nông thôn bền vững giai đoạn 2021 - 2030, tầm nhìn đến năm 2050</h3>
+                            <a href="https://vanban.chinhphu.vn/?pageid=27160&docid=205277" target="_blank" class="read-more-btn">
+                                Đọc thêm <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 🔘 Dấu chấm chuyển trang -->
+                <div class="carousel-dots" id="newsDots"></div>
+                
+            </div>
+        </section>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 🎮 KHU VỰC GAME CHÍNH (CANVAS) -->
+    <!-- ========================================= -->
+    <div id="game-container" class="hidden">
+        <!-- Khung game -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- ✨ GIAO DIỆN HIỂN THỊ TRONG GAME (HUD) - ĐÃ ĐƯỢC SỬA LỖI -->
+
+        <!-- Thanh tiến độ ở giữa (Định vị độc lập) -->
+        <div id="progress-container">
+            <div id="progress-icon">🗺️</div>
+            <div id="progress-bar-wrapper">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="progress-text">0%</div>
+        </div>
+
+        <!-- Cụm HUD ở góc trên bên phải -->
+        <div id="hud-top-right">
+            <!-- 💰 Điểm số -->
+            <div id="hud-score" class="hud-box">
+                <span>💎</span>
+                <span id="score-value">0</span>
+            </div>
+
+            <!-- 🏆 Nút BXH -->
+            <div id="toggleLeaderboardBtn" class="hud-box">
+                <button>🏆</button>
+            </div>
+        </div>
+
+        <!-- Bảng xếp hạng mini (vẫn định vị độc lập, không thay đổi) -->
+        <div id="leaderboardPanel" class="leaderboard-panel hidden">
+            <div class="panel-header">
+                <h3>🏅 Bảng Xếp Hạng</h3>
+            </div>
+            <ul id="leaderboardList"></ul>
+        </div>
+
+        <!-- Hiệu ứng điểm số bay lên -->
+        <div id="score-popup" class="hidden"></div>
+    </div>
+
+    <!-- 🌅 Màn hình kết thúc map (hiển thị khi hoàn thành 100%) -->
+    <div id="map-end-screen" class="hidden">
+        <div class="map-end-overlay">
+            <div class="map-end-scroll" id="map-end-content"></div>
+            <button id="continueMapBtn" class="hidden">Tiếp tục hành trình</button>
+        </div>
+    </div>
+
+    <!-- 🌑 LỚP PHỦ ĐEN MỜ (HIỂN THỊ KHI HOÀN THÀNH MAP) -->
+    <div id="fade-overlay"></div>
+
+    <!-- ========================================= -->
+    <!-- 🧩 HỘP THÔNG TIN & CÂU HỎI TRONG GAME -->
+    <!-- ========================================= -->
+
+    <!-- Hộp hiển thị nội dung khi mở rương (Phong cách cuộn giấy) -->
+    <div id="infoBox" class="modal-backdrop hidden">
+        <div class="modal-scroll">
+            <div class="scroll-content">
+                <h3>📜 Thông Tin Kho Báu</h3>
+                <p id="infoText"></p>
+                <button id="quizBtn">Giải đố ngay!</button>
+            </div>
+            <div class="scroll-footer"></div>
+        </div>
+    </div>
+
+    <!-- Hộp hiển thị câu hỏi (Phong cách cuộn giấy) -->
+    <div id="quizBox" class="modal-backdrop hidden">
+        <div class="modal-scroll">
+            <div class="scroll-content">
+                <h3 id="questionText"></h3>
+                <ul id="answerOptions"></ul>
+            </div>
+            <div class="scroll-footer"></div>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 🚪 MODAL THAM GIA PHÒNG (NHẬP PIN + TÊN) -->
+    <!-- ========================================= -->
+    <div id="joinRoomModal" class="modal-backdrop hidden">
+        <div class="modal-content join-modal">
+            <span id="closeJoinModal" class="close-btn" role="button">✖</span>
+            <h3 id="joinModalTitle">🚪 Tham Gia Phòng</h3>
+
+            <!-- 🧭 Bước 1: Nhập mã PIN -->
+            <div id="pinStep">
+                <div class="form-group">
+                    <input type="text" id="roomPinInput" placeholder="Nhập mã PIN..." maxlength="5">
+                </div>
+            </div>
+
+            <!-- 🧭 Bước 2: Nhập tên người chơi -->
+            <div id="nameStep" class="hidden">
+                <div class="form-group">
+                    <input type="text" id="playerNameInput" placeholder="Nhập tên của bạn...">
+                </div>
+            </div>
+
+            <!-- 🔘 Nút xác nhận -->
+            <button id="joinModalBtn" onclick="handlePinSubmit()">Tiếp tục</button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- ⚙️ TẬP LỆNH JAVASCRIPT -->
+    <!-- ========================================= -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/imaya/zlib.js@master/bin/zlib_and_gzip.min.js"></script>
+    <script src="maps/map1.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>

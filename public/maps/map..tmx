@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="40" height="37" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="1">
+ <tileset firstgid="1" name="terrain_3" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../../../../Downloads/map/terrain_3.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="1025" source="../../../../Downloads/map/terrain_3.tsx"/>
+ <tileset firstgid="2049" name="plant repack_0" tilewidth="32" tileheight="32" tilecount="169" columns="13">
+  <image source="../../../../Downloads/plant repack_0.png" width="416" height="416"/>
+ </tileset>
+ <tileset firstgid="2218" name="terrain_atlas" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../../../../Downloads/terrain_atlas.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="3242" name="build_atlas" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../../../../Downloads/build_atlas.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="4266" name="tilesheet" tilewidth="32" tileheight="32" tilecount="490" columns="10">
+  <image source="../../../../Downloads/tilesheet.png" width="320" height="1568"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJzt1LEJACAMBdEIOphkHocQ13I409gIWglJccXrj3xIKyINAJzVLKLZv+OmW9sI3AcAp8nPggM1KUDHSw3Q8BL9fntn7wYAAIBfFjqfkfU=
+  </data>
+ </layer>
+ <layer id="2" name="đường" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJztmA1uwjAMhRH4JHCSspM0O0m3m6QXXdCw9Prh/qRA1UmLZFEocZ+fXxyn2Q6Hvlguloqdi30UWzOaMu8i/vL9Osn1Z6Xv032++qz1QWzurwfGNfg6+8WYJc4bh9cKHh2b4nJMtDX5IcbaWFvgivKrv3n8bkvwtjK/Bp/m1TEci32JUUPK79J8tfaYlyX4WhtydMP2jXmaH7Vkw5yR16vFPvxZU3E193uqu6mYOvDJdZTwbLcxLjTOKK4L/ufzlug/whppN03kgbH1M79T/0vXaGexRlOAj/9XLapelDP6Ux5ralRrwzz49VRcJ3vMH3WdgYvxLOVSc65WM8fxsn5QS+S3Jt/PDMfL+qH3x3S0Fca5wXqo62nNvv4ufNG63wM+zTG1OqaLrUe3Q0x/afjeXFOftxrs8c87w6r7VIbtYf2yz90jvrFebg2+V2uC+8ez/L16X3T+tEfy77X4mjfsi4qP+29NT6hnVq0Ba2sBzyPkUD/ncDbwwzrQB5infDmuub6fZ5sob9E7Emo5uhdxrHypzqJzsPaFY+tZeaN2WRP4TP2eg994FiE/0TsKXZt8R8LnRDqJch/VXvLi3LF3UYw8R13g92jDsyc5TLhHDfX2iMnnRtimeMwWx9bakE/VyzM21/NF7zsch8bWAdeWvST36THet8blIzrv/vfarx8/0QYvwg==
+  </data>
+ </layer>
+ <layer id="4" name="cỏ" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJztlwGuwjAIQLu5/nuoJ3He7R9MjQdxF3HNTxM+AQqM+ZefkZBolsKDtlBS+i3HnNJpgZ5zEsVq/4DsXeb/98HHdpvXXYP5XkMMo4bNa5titMSpZYOMI1ANL2bUxonZuvl3TyiO35NTfLY1OdSuKfFLrDCnlfU2yL4umc9/WVu+4X3VxKRlvSrOIY5tzDSXhY9i5fZfc1cs4q1PXN3U3ucIxiLfXzaf3jPiYXzMbE+GD/usajkjLY3sRWvo0jr/CaVq1H/O4RisJVcwh6XfTcNPPffkMVrKfsLaDXsBt9e1F1Ha53b94Hq+Zi22MxF8Ur2t3zn/PWMT2+4Y5s5gh/IddSegb3j+tlZf8Htwa3yeN+TOx/NJb9wt8C3NY3RcHJ93Zo3Mf2vOtDBiW9SMAZWzC3uTdj5v5cM6T0v8nB2qJ2rmaw+bVbR9FjJy8+oaIt1VipHiqvnHIr1VJK0+udxJjBRDtYGZWrYln5b1HCOOTxPvWkq9qTDLX7Ht+hl9A/k555E=
+  </data>
+ </layer>
+ <layer id="5" name="Sông" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJztmD0KwkAQRrdYQvAOehGNtdqrjVqo2KoHiJV6isRKPYl6Da/ipAguw+xfYhKQefBBINlv3qZZWCEYhmGYInRDIXqQKDR/dwyEOKGcg+r9BuA1hIwsfldwuaHca/Abg9cEMq3IbyHL+S3BawVZW/we4PJEeTn4RbKc4xa8dpC9xa8osSzv6MMM5swNwR6ZX+6o+8bWqVtHufXldyaVg8ZPTYTm2jrVdTpHFzfqP7nM9QneG95jG5KidAxdpvexodPU/W7Rz1nPhfi/icEhf6+bnyqd1Fmhdpv2kWrc1B5qjQ+6syIp2PdrXM+KpnA9K5qi6rOCYRiGYZj/h7rTqOtew8VrQ9wZ+N5rfACLOXsR
+  </data>
+ </layer>
+ <layer id="6" name="Cây" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAPlrAxMCzFgpexEdBIJ3AE6I6jQOw2SN0HAzB3wvCxQea+UYAd2HAwMNhyDLQrcANPoNu8BrH7woBuCx/E7ksGui1lELuvAOi2QgrdZ80xuNOxBwd90nE+K3n6QjkGdzpO4hjc6TifgzrpeCCBAhf5+WgvC23cBAN10LYEtny0hwWVJhZgc/M+Ftxq0NV/54JgZDCQ+Qg97sS5IRgZwPLRQSLCitTwJATQ486cG4KRAS3zEaG0Tau4IzY/EaojyC0DU5HqBGxhQGy9RCh8iI07fHUUtjBAtxOXfnrUEdjCgFg70cOH3LoaH8AWBoOpXqJGGsEGHIDmOVLgx1QaxAUy8AW6zW+QxMFwBIOh/Y/PDaS0/2nlF3xuIKXuo1VfBp8bSCnbaVWP43MDKe0WWtVT2NyAXK4RW6bCzEFvI7YA2+CtSLhtkI3voY/j4hsfpXV5jw2guy91kIQlALKsWyo=
+  </data>
+ </layer>
+ <layer id="9" name="rau củ" width="40" height="37">
+  <data encoding="base64" compression="zlib">
+   eJztmLtOAkEUhk9JwggECy+VvoMGr4l2ao+UXns1Wlh56fSFBKzUhqCWKuALEJ7AS+U/2SVrJpthZjksE+BLvk52vl3jcQ9EduSFp2QnTbQL99KWFwmhliKqwwb8TEW/zpnwlFyi6wpeM/R9oekb/sBfv6861v11uZjAPU7CKTjt328rYt9FFs8uy9cmyaFpAS7CpS5/Hzdou2Xui5tePGNOBuEZu8a86HeBHjnXx0UwQ2fwdzrLMDu5OEXTuf//Zw6uoW09pO8uQ1SEpUz8jSY8oOsRPjna94yuF/jqaN8but7hh6N9I0YMAv14Ryni3boEy/C+wx4Q9R1FPWM5QbQCVxOdP8u1p9icsYGuTbhl0Be2p3CjnpFH1zYsGPSF7SncqGfso+sAHhr0ce4ppmccoesYnhj0mTCMu8Uw3rOr2MxTm5/lQp2nugab2cuFOk91DTazlwt1nuoabGYvF+o81TVwzt6cCFTR7dKcDbo5WBCBknLSU9LepSs9/k5TNwflft9W0kh6/qcZ83euf6VnZQk=
+  </data>
+ </layer>
+</map>

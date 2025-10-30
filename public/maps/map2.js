@@ -1,0 +1,696 @@
+(function(name,data){
+ if(typeof onTileMapLoaded === 'undefined') {
+  if(typeof TileMaps === 'undefined') TileMaps = {};
+  TileMaps[name] = data;
+ } else {
+  onTileMapLoaded(name,data);
+ }
+ if(typeof module === 'object' && module && module.exports) {
+  module.exports = data;
+ }})("map2",
+{ "compressionlevel":-1,
+ "height":55,
+ "infinite":false,
+ "layers":[
+        {
+         "compression":"zlib",
+         "data":"eJztmssRwjAQQ7eF0EmohFAJUAmhYryHzORgYBV\/tVgzugIvsp2Ngki6nsGn4Hshz8HXDL8zp0ozP+qhmHWTdK4peI34VZHDqpSMN84eub4JZWbl3AtZ1z3uS1RIxh54VVZmL7wqy7r2xGvJuMdZIkVW5qWSS+sSfJbf67qWS6v0nNkbr6on5lrKMVsP3sE7eOvz9nRPqqFesq3Bi2Y7SbzfyOWeWNWMzw\/KuQjOqtky9hxH9isrqwrlZWZVIbzsrCorrwdWlZWX8SyOyco7i48u59\/6Z4TXQ8bo\/Yid+ci8wcx8tK8azFxS5lVwbvYzG82aOeNNaNYemFVI1iWYF6Nzfm9LZmRPWa+NxUj3kfP8Qu8XLZzzWrdmGR4e5vEkx2ZMBm9se2s\/l+v9WezzW\/pT92h5PrawMHSb1mxn8TE\/o93WItzco+vxn3XK\/7FYs27F\/Aazd1+v",
+         "encoding":"base64",
+         "height":55,
+         "id":1,
+         "name":"\u0111\u01b0\u1eddng",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztmluOwyAMRdlFZid0JZOspO1K2lnukA+kyCK2EzsEjC3drzbUh9vwMq8QwktB7yCLp1IetRSTloF4Jcy\/SY8G8q\/B3DPrUWYLrFmc8avHd1bisSVeDrM1XorZIi\/G\/En6Jv00kKO2sPErc1ti3\/MYY8fUQ79I19hn+gWqV96z4bzOq6Ep6a8SExYjebtGy7zr\/mlW0HYebOG\/vMeltVeMmzbv9tbSHpjjrbU9A\/XeWuKlvLXGS3lr6d0dyVsOqyVe7trCeftUDLyzDCu8XI\/XM4oezmXcY\/f4iMcjMlv6X3OYLXnszGMxzwT3lcx39SU1V11VO7yqNjcFvI7DPYvW9rrUpxrSPFvXZO4ltLzw8PA4HrBmIrlbWmqP0sJ8DuZ1toYFz12pGsvR9ihF5nNR+DtYu9J7WVPo6w5LiTmfwUOWkuAc3\/LaO\/Nsc96ynl2vwHn6bv4SJ8wVfiYZ6yB\/bd43yB8bD5dQrjFFAX9t3gjyh+P0E\/ku1uaMqPZ9BsrvPV7NPs7s\/9uja1c=",
+         "encoding":"base64",
+         "height":55,
+         "id":8,
+         "name":"c\u1ecf",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJzt1U0KwjAQhuEWvE29gbqvP1t1r66qoJ7Dm7Qe0llYKGEakiYWS94Hvl1+ZqaQlrMsW0s2khTspc+D5JhIvyfp8yy5JNLvXfp8SJ6J9PtvFjL3pWSVyPzLiO\/nFGYX8\/2MObtfifl+TuHfE\/P95N8DAAAAAAAAAAAAAAAAYCqqPMuundzy8e5yvc\/cM6Te9u6d5NXJtnOOT33aWjPmXeZ9fcw92n5bfVXP3eY5tvpcevGJdm5be+g5obW5ppA0knngDBpLfM4uPPdr67V97br39\/vUgX3b1B41vZWzbPu19dq+vnXa2S4zGMqlprGZM9D6\/wB40Z0R",
+         "encoding":"base64",
+         "height":55,
+         "id":9,
+         "name":"s\u00f4ng",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztmrFOwzAQhi23Eg+AxCvAzgiMLYWBDdiBAhOFdwBGHgEYgMcAhsJjADvvAJwlokSOGyfx3dlx\/Un\/ltb+fWf3zo0QZS57QlyBjkGPFj31DF\/gSDZ+UfpcXMdd6wuxDtoAPdTwSem3avwB6A307jjuCHxugbZB0\/\/vNGnI4LdqfFefGbvgcw+037fPZVhYa6zxuTkAn4egI4tfxRR5rRXF\/cTBBMY5B10wjadT3E\/zQN391BTuvKlLk\/3UhFDzhmo\/UeVNqFDlTaj4Pod9o9ep1x2tH+qi16fjyD1z9QChYPI7jjjHq3o9rN4rJLh7W99UxZYzrlx17lDLXey+ui5cdS5FL9uGVOfGzbzXuQrTvWxsdUHRo+3+O4a6qMnd9yz\/XfJdvO919d2V\/HeJsW0dlmVZKzJOv0qbsqwFwxpwrge3X5tGyS8qGGdWl\/wqqGLcxq9pf2Pv6ZD8csQ869uw85rar2sfj72XTySOTmf4xejj9f\/7bf4HFc9RQ9HHV73voJTdXZieoyb18e1YcvjsIujbbfjOsep7AolEojE+38+5hd+\/O9A9w+9ghs\/3c57B5wvoldEvRr3TNk4f8Pwn6IvRL0a90zZOP\/D8r\/oMY26pOsW13vERJ59gx2lH5qLGx5mpcyZzUc\/Jx5mpcyNzUc8pxL1IOScfZ6YNyjn9AfVlhv4=",
+         "encoding":"base64",
+         "height":55,
+         "id":10,
+         "name":"c\u1ea7u",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJzt2ldwVNcZB\/A1Eh3s5JEadzKmz4Rio4oEiG4\/JJm4pL+A2grUbVNi7NgUl0e3lFfAlBmnWR2QBNgY5zGxnXfUBarEhvx2tB6tVRCIFcgTfTO\/We1Fe+7351zdc3alQGDwmvtEIPAD7ucBlq8MBFawks5lgUDXshu8eBj1L+P9m8\/5gi\/ZNiMQ2E46GWSSRTZBctjBTnLJI58CCiniw8cDgb88PvT5fy7jL\/glvyJfzgIKQ7mXy708unlnGG8ms5jNHC7pt456GmikiWZaaOUyV2ijnQ466aJ7Rs\/Y7eG8cbGBQDzF9\/c\/\/x9k\/CN\/4s+85Hv28TIFeinkVV+\/xv4BXn+r9TPjPc0zPMtzbJtpfkkng0yyyCZIDjvYSS555FNAIUUze8Ze9kTP43pZN3B1gH6vO\/ZQTCBwzwOBwDhiiGU8E5jIJCYz5YHbz\/u2fO\/wLu\/xfmh+9VtHPQ000kQzLbRymSu00U4HnXTRHc6bF877E1l\/Gppf\/a4K9xzvMYFEkkhmNSmksoa1rCON9WyIQt6Batss80s6GWSSRTZBctjBTnLJI58CCima9e3xfiPrb0Pzq98SSimjnAoqqeIUpzlDNTXUcpZznB+hvJf0W0c9DTTSRDMttHKZK7TRTgeddNHdJ29Q1pzQ\/D5ofokjngQSSSKZ1aSQyhrWso401rPhwZHJu222+SWdDDLJIpsgOexgJ7nkkU8BhRTNHnjcq\/otoZQyyqmgkipOcZozVFNDLWc5N0JZQ3VJv3XU00AjTTTTQiuXuUIb7XTQSRfdg+Qtfsj8Ekc8CSSSRDKrSSGVNaxlHWnsm+qezSv8fmp0826bY35JJ4NMssgmSA472EkueeRTQCFFcwYeN3QfLtF7KWWUU0ElVZziNGeopoZazoaOyVhNDbVRzntJv3XU00AjTTTTQiuXuUIb7XTQSRfdg+Qtftj8Ekc8CSSSRDKrSSGVNaxlHWnETrNGMYGJ06Kbd9tc80s6GWSSRTZBctjBTnLJI58CCimaO\/C4V\/VdQilllFNBJVWc4jRnqKaGWs5yjvMPRzfnN3VJv3XU00AjTTTTQiuXuUIb7XTQSRfdffJ+GN5nFT9ifokjngQSSSKZ1aSQyhrWso401rPhkZ5xVsX27tlGY7WF817VbwmllFFOBZVUcYrTnKGaGmo5yznOh\/Omxfbu2UZj\/Si8zyp+1NwQRzwJJJJEMqtJIZU1rGUdaax\/tHe8H8f27tlGY+XK27zCzwIl+i6ljHIqqKSKU5zmDNXUUMtZzkXk\/XVs755tNNYi7+0Ws4SlvDAvEHiRXeye1\/M9ez3+Lvz1Po8v88q8njXsVY+vzesdLzu2d882GitLxmyC5KzsPX5NhuuhHD\/0\/ohxHJbhCEf5gGMc58QNsoX+T+5kfbTKdUopZatub6w6ueppoJEmmmmhdZTM51UZ\/8tXfH2beR8bHwjMZwELWcRilrB0fHT6vd16Is59lzjiaZpgTmihdcKtjbVdpnQyyCSLbILkDDNvtNfrYhmf5wVeZNFEc8ISlk68tfMelukIR\/mAYxznBCeHmTfa6\/V2mdLJIJMssgmSE5H3Zs5bJ1M9DTTSRDMttA4zb7TX68MyHeEoH3CM45zgZETemznvY67\/+SxgIYtYzBKW3uLPxjcV7fW6TqZ6GmikiWZaaI3IG3newdaQ7TKlk0EmWWQTJGeYeaO9Xj82yZywgIUsYjFLWDpp5M57t2q7TOlkkEkW2QTJmTT068fq7leHfUQnXXRH7CmOeQ9wnBOcXHH3+rvdOjLN\/Tbic5Pl1tUVrOTxuN7jTSt63\/u0DpL345j+PhvCYDVSe+X6Pp8R5ctYQCFFEXn7vvcJ1Uzv\/2YxmznUxfTXMoQ7XfOn9z+2xLEDUwOBgxzi9an93\/vscq0\/LeMzPMtzXIzpb+sQRkMF5f1Yxk+4wKdcJEbO2PDclsv7jozv8h7v0xjT34EhjIY6Ie9U1\/k0pnMv95Eia2o47zV5r4fuZ675e8LX\/fSY\/rKGMFpqo3yb2MwWtvKSrPvCeRNkTCSJ5HDehTH97b+B7YO4E7Xw3m8\/X9rn+Sf2Exci9hS7ZNzNHvaG8x6L6XE0wqJhGA01bbLrc3Lv83IZK6ikKm7g1xRPHvj4Hsf3DvJvd7s26Gsjm9jMFrbyJE8Ns+dKr3ve\/e8FXmQXu9kT5d8XDaf26+0ABznE67zBm7zVJ2\/ZOPM+7ubGLZGtlDLKqaBykLwjsfcoX+acVFIV8bdB52X6mE+4wKdc5DP+2Sfvl7L+h7\/dZOav5Puaa1wPZY3y78duVNdkvB7Kudz6EvG3QVOmWJuYxnTu5T6+x\/en3Ln+ol0JMiaSRHJE3g0ybWQTm9nCVp7kqe9w3l0y7mYPeyPy7pfpAAc5xOu8wZu89R3OO1ZjNVZjFaq\/htfgv\/MPPrrJ9XikKinWmhPxWelo6y\/atVnWLd\/xz4bHaqzG6v+zStyPS0fZPXkk14zPjfVFFMb7H1qafIM=",
+         "encoding":"base64",
+         "height":55,
+         "id":11,
+         "name":"l\u1ec1u",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJzt2cdPk3Ecx\/EvUqCUthDx5Ih61ouBdEKHLdDIjHpyRD3rxYsaRoeUEVvGX+D4NxwMWSbMqP+FXrygMlrfPXijHICnz+jzSV4XDuX3Dnmg\/Cqi7VV6RCwetU9RukVojR6xN+cVyUN8IhW+Ez2WYhumNX3E3gCNQYQQ1knvcRanMYEkUifUm7GLZDGBSUxh2n4yr63FrdK2hnVsYBNbBu6tc4jY4YAT9WhwqH0q5dZJWxe60YNe9Bm4N0NbFhOYxBSmDdy7Stsa1rGBTWwZuLfOyfMLB5yoR4NT7VMpt07autCNHvSiT+O9226R3\/iDv261T6P8XLxfc8MDbxm8N39G43O8gI33XXWww1EG7zlv0NiJLnSXQe8rGjPIYqIMes2ZM\/q+Nol8w\/cmtU9Smp1uFmnEmWa1T1Ka3aTzFm5rtLdR7QMoNPO5Mva0\/lwptad2kZcYRhojGMUYxnV4V9hQ5OszfpFZzGEeC7QtYgnLWMEXHfYWW47GPKRFpAKVDhELqlCNGlgNdJcUoDGIEMKI0BZFG9rRgZjOeg\/7WxqnMYEkUhimLY0RjGKs0Mz\/8DFcxCVc1vH9xQaNm9jCZ9oWsIglLGOl0EzfOB7gIR7puPf\/ftF1ysnzCwuqUI0aWPGaxjd4i3cG6L1G03VEEEUb2tGB2AF3oz+8Ij+9B7\/WjlVkF3vYRw55SC2\/E2sVzVBsV3wiV4vc1fho8qMFrQggiBDCOu19TOuTIr39NA1gEEOII4EkUjrtPWzvafqAj\/iEGcxiDvMq9yrxf98OTbvYwz5yyBc6bTy\/NgW+ocrz0eRHC1oRQBAhhDXYe9yfeT9NAxjEEOJIIImUBnvNmTNnzlzxaemetBSfX2vpnrQUn19r6Z7U\/PzanLny2FmXyDmcxwWX2qdRfndovIt7uG\/Q3n+jMZ3O",
+         "encoding":"base64",
+         "height":55,
+         "id":12,
+         "name":"c\u00f4ng c\u1ee5",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":60,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":14,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "columns":32,
+         "firstgid":1,
+         "image":"maps/terrain_atlas.png",
+         "imageheight":1024,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"terrain_atlas",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":32,
+         "tilewidth":32,
+         "wangsets":[
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":112,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":16,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":17,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":48,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":49,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":79,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":80,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":81,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":111,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":112,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":113,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":143,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":144,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":145,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":118,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":22,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":23,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":54,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":55,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":85,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":86,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":87,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":117,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":118,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":119,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":149,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":150,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":151,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":394,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":298,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":299,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":330,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":331,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":361,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":362,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":363,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":393,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":394,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":395,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":425,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":426,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":427,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":422,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":295,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":296,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":327,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":328,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":358,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":359,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":360,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":390,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":391,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":392,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":422,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":423,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":424,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":932,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":836,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":837,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":868,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":869,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":899,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":900,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":901,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":931,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":932,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":933,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":963,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":964,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":965,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":518,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":486,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":487,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":518,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":519,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":549,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":550,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":551,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":581,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":582,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":583,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":613,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":614,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":615,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":-1,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":833,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":834,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":865,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":866,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":896,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":897,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":898,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":928,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":929,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":930,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":960,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":961,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":962,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":-1,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":775,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":776,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":807,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":808,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":838,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":839,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":840,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":870,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":871,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":872,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":902,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":903,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":904,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }]
+        }, 
+        {
+         "columns":13,
+         "firstgid":1025,
+         "image":"maps/plant repack_0.png",
+         "imageheight":416,
+         "imagewidth":416,
+         "margin":0,
+         "name":"plant repack_0",
+         "spacing":0,
+         "tilecount":169,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":64,
+         "firstgid":1194,
+         "image":"maps/props_2x2.png",
+         "imageheight":1280,
+         "imagewidth":2048,
+         "margin":0,
+         "name":"props_2x2",
+         "spacing":0,
+         "tilecount":2560,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":128,
+         "firstgid":3754,
+         "image":"maps/props_4x4.png",
+         "imageheight":2048,
+         "imagewidth":4096,
+         "margin":0,
+         "name":"props_4x4",
+         "spacing":0,
+         "tilecount":8192,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":64,
+         "firstgid":11946,
+         "image":"maps/props_1x1.png",
+         "imageheight":2304,
+         "imagewidth":2048,
+         "margin":0,
+         "name":"props_1x1",
+         "spacing":0,
+         "tilecount":4608,
+         "tileheight":32,
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":60
+});

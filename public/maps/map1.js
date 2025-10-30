@@ -1,0 +1,457 @@
+(function(name,data){
+ if(typeof onTileMapLoaded === 'undefined') {
+  if(typeof TileMaps === 'undefined') TileMaps = {};
+  TileMaps[name] = data;
+ } else {
+  onTileMapLoaded(name,data);
+ }
+ if(typeof module === 'object' && module && module.exports) {
+  module.exports = data;
+ }})("map1",
+{ "compressionlevel":-1,
+ "height":37,
+ "infinite":false,
+ "layers":[
+        {
+         "compression":"zlib",
+         "data":"eJzt1LEJACAMBdEIOphkHocQ13I409gIWglJccXrj3xIKyINAJzVLKLZv+OmW9sI3AcAp8nPggM1KUDHSw3Q8BL9fntn7wYAAIBfFjqfkfU=",
+         "encoding":"base64",
+         "height":37,
+         "id":1,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztmA1uwjAMhRH4JHCSspM0O0m3m6QXXdCw9Prh\/qRA1UmLZFEocZ+fXxyn2Q6Hvlguloqdi30UWzOaMu8i\/vL9Osn1Z6Xv032++qz1QWzurwfGNfg6+8WYJc4bh9cKHh2b4nJMtDX5IcbaWFvgivKrv3n8bkvwtjK\/Bp\/m1TEci32JUUPK79J8tfaYlyX4WhtydMP2jXmaH7Vkw5yR16vFPvxZU3E193uqu6mYOvDJdZTwbLcxLjTOKK4L\/ufzlug\/whppN03kgbH1M79T\/0vXaGexRlOAj\/9XLapelDP6Ux5ralRrwzz49VRcJ3vMH3WdgYvxLOVSc65WM8fxsn5QS+S3Jt\/PDMfL+qH3x3S0Fca5wXqo62nNvv4ufNG63wM+zTG1OqaLrUe3Q0x\/afjeXFOftxrs8c87w6r7VIbtYf2yz90jvrFebg2+V2uC+8ez\/L16X3T+tEfy77X4mjfsi4qP+29NT6hnVq0Ba2sBzyPkUD\/ncDbwwzrQB5infDmuub6fZ5sob9E7Emo5uhdxrHypzqJzsPaFY+tZeaN2WRP4TP2eg994FiE\/0TsKXZt8R8LnRDqJch\/VXvLi3LF3UYw8R13g92jDsyc5TLhHDfX2iMnnRtimeMwWx9bakE\/VyzM21\/NF7zsch8bWAdeWvST36THet8blIzrv\/vfarx8\/0QYvwg==",
+         "encoding":"base64",
+         "height":37,
+         "id":2,
+         "name":"\u0111\u01b0\u1eddng",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztlwGuwjAIQLu5\/nuoJ3He7R9MjQdxF3HNTxM+AQqM+ZefkZBolsKDtlBS+i3HnNJpgZ5zEsVq\/4DsXeb\/98HHdpvXXYP5XkMMo4bNa5titMSpZYOMI1ANL2bUxonZuvl3TyiO35NTfLY1OdSuKfFLrDCnlfU2yL4umc9\/WVu+4X3VxKRlvSrOIY5tzDSXhY9i5fZfc1cs4q1PXN3U3ucIxiLfXzaf3jPiYXzMbE+GD\/usajkjLY3sRWvo0jr\/CaVq1H\/O4RisJVcwh6XfTcNPPffkMVrKfsLaDXsBt9e1F1Ha53b94Hq+Zi22MxF8Ur2t3zn\/PWMT2+4Y5s5gh\/IddSegb3j+tlZf8Htwa3yeN+TOx\/NJb9wt8C3NY3RcHJ93Zo3Mf2vOtDBiW9SMAZWzC3uTdj5v5cM6T0v8nB2qJ2rmaw+bVbR9FjJy8+oaIt1VipHiqvnHIr1VJK0+udxJjBRDtYGZWrYln5b1HCOOTxPvWkq9qTDLX7Ht+hl9A\/k555E=",
+         "encoding":"base64",
+         "height":37,
+         "id":4,
+         "name":"c\u1ecf",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztmD0KwkAQRrdYQvAOehGNtdqrjVqo2KoHiJV6isRKPYl6Da\/ipAguw+xfYhKQefBBINlv3qZZWCEYhmGYInRDIXqQKDR\/dwyEOKGcg+r9BuA1hIwsfldwuaHca\/Abg9cEMq3IbyHL+S3BawVZW\/we4PJEeTn4RbKc4xa8dpC9xa8osSzv6MMM5swNwR6ZX+6o+8bWqVtHufXldyaVg8ZPTYTm2jrVdTpHFzfqP7nM9QneG95jG5KidAxdpvexodPU\/W7Rz1nPhfi\/icEhf6+bnyqd1Fmhdpv2kWrc1B5qjQ+6syIp2PdrXM+KpnA9K5qi6rOCYRiGYZj\/h7rTqOtew8VrQ9wZ+N5rfACLOXsR",
+         "encoding":"base64",
+         "height":37,
+         "id":5,
+         "name":"S\u00f4ng",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJxjYMAPlrAxMCzFgpexEdBIJ3AE6I6jQOw2SN0HAzB3wvCxQea+UYAd2HAwMNhyDLQrcANPoNu8BrH7woBuCx\/E7ksGui1lELuvAOi2QgrdZ80xuNOxBwd90nE+K3n6QjkGdzpO4hjc6TifgzrpeCCBAhf5+WgvC23cBAN10LYEtny0hwWVJhZgc\/M+Ftxq0NV\/54JgZDCQ+Qg97sS5IRgZwPLRQSLCitTwJATQ486cG4KRAS3zEaG0Tau4IzY\/EaojyC0DU5HqBGxhQGy9RCh8iI07fHUUtjBAtxOXfnrUEdjCgFg70cOH3LoaH8AWBoOpXqJGGsEGHIDmOVLgx1QaxAUy8AW6zW+QxMFwBIOh\/Y\/PDaS0\/2nlF3xuIKXuo1VfBp8bSCnbaVWP43MDKe0WWtVT2NyAXK4RW6bCzEFvI7YA2+CtSLhtkI3voY\/j4hsfpXV5jw2guy91kIQlALKsWyo=",
+         "encoding":"base64",
+         "height":37,
+         "id":6,
+         "name":"C\u00e2y",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "compression":"zlib",
+         "data":"eJztmD1OAkEcxackYYAECtFK76ABBRPt1B4p8YMeiBZWfHR6IsULGE+geAHjCVQq32SXrJlshpnlARvYX\/I6duc3S3jMf4Vwoya9KBo5IS6Qy5zjTUJ4ywrxjoyQj2z0+9xKL4oevPrIgOD3Dacf5BcZ+36vmdnvy2IDeywim8iWv9+viH7dPJ5dnuemKMGpjOwjBzN+H\/dweyD7LZp5PGMmq\/CM48aeXLaBGdXrBRl06DZ+pzuE7mRxA6c7\/\/9nFzmC23GM\/BISEhJWhWWcUR5xtn5ChsjzlDkg6hlFX6OSEqKKHKamX8uaU1zWOIHXKXJm4Rc2p7DR16jB6xypW\/iFzSls9DWu4HWNNC38mHOK7RoteLWRjoWfDes4W6zjnuOKS5+6fJaF3qcmB5fuZaH3qcnBpXtZ6H1qcnDpXhZ6n5ocmN1bkkF0TLM008HUg3UZRDFMe1FMZumXOb\/TNPWgmu8nUYzSXv7zueB3rn8QUFsB",
+         "encoding":"base64",
+         "height":37,
+         "id":9,
+         "name":"rau c\u1ee7",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":40,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":10,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "columns":32,
+         "firstgid":1,
+         "image":"maps/terrain_3.png",
+         "imageheight":1024,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"terrain_3",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":32,
+         "firstgid":1025,
+         "image":"maps/terrain_3.png",
+         "imageheight":1024,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"terrain_3",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":32,
+         "tilewidth":32,
+         "wangsets":[
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":162,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":1,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":2,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":33,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":34,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":64,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":65,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":66,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":96,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":97,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":98,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":128,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":129,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":130,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":161,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":162,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#00ff00",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":124,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":28,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":29,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":60,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":61,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":91,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":92,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":93,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":123,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":124,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":125,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":155,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":156,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":157,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":289,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":193,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":194,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":225,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":226,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":256,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":257,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":258,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":288,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":289,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":290,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":320,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":321,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":322,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }, 
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":676,
+                 "type":"corner",
+                 "wangtiles":[
+                        {
+                         "tileid":580,
+                         "wangid":[0, 1, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":581,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":612,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":613,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":643,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":644,
+                         "wangid":[0, 0, 0, 1, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":645,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":675,
+                         "wangid":[0, 1, 0, 1, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":676,
+                         "wangid":[0, 1, 0, 1, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":677,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 1]
+                        }, 
+                        {
+                         "tileid":707,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":708,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":709,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }]
+                }]
+        }, 
+        {
+         "columns":13,
+         "firstgid":2049,
+         "image":"maps/plant repack_0.png",
+         "imageheight":416,
+         "imagewidth":416,
+         "margin":0,
+         "name":"plant repack_0",
+         "spacing":0,
+         "tilecount":169,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":32,
+         "firstgid":2218,
+         "image":"maps/terrain_atlas.png",
+         "imageheight":1024,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"terrain_atlas",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":32,
+         "firstgid":3242,
+         "image":"maps/build_atlas.png",
+         "imageheight":1024,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"build_atlas",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":10,
+         "firstgid":4266,
+         "image":"maps/tilesheet.png",
+         "imageheight":1568,
+         "imagewidth":320,
+         "margin":0,
+         "name":"tilesheet",
+         "spacing":0,
+         "tilecount":490,
+         "tileheight":32,
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":40
+});
