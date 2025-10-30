@@ -2,6 +2,7 @@
   "name": "treasure-multiplayer",
   "version": "1.0.0",
   "description": "Multiplayer Treasure Quiz Game",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

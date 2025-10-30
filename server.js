@@ -456,4 +456,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(process.cwd(), "public", "index.html"));
 });
 
-server.listen(3000, () => console.log("🚀 Server chạy tại http://localhost:3000"));
+// ===================================================
+// ⚙️ EXPORT cho Vercel serverless handler
+// ===================================================
+export default app;
+
+// Nếu chạy local thì dùng port 3000
+if (process.env.NODE_ENV !== "production") {
+  server.listen(3000, () => console.log("🚀 Local server running at http://localhost:3000"));
+}
