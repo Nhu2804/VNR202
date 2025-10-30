@@ -461,7 +461,17 @@ app.get("/", (req, res) => {
 // ===================================================
 export default app;
 
-// Nếu chạy local thì dùng port 3000
-if (process.env.NODE_ENV !== "production") {
-  server.listen(3000, () => console.log("🚀 Local server running at http://localhost:3000"));
+// ===================================================
+// 🚀 Khởi động server thật khi không phải môi trường Vercel serverless
+// ===================================================
+const PORT = process.env.PORT || 3000;
+
+if (process.env.VERCEL) {
+  // Vercel sẽ tự quản lý serverless — không listen()
+  console.log("✅ Running inside Vercel serverless environment");
+} else {
+  // Local hoặc Render (production thật) sẽ cần listen()
+  server.listen(PORT, "0.0.0.0", () => {
+    console.log(`🚀 Server đang chạy tại cổng ${PORT}`);
+  });
 }
