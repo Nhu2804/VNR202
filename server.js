@@ -447,7 +447,13 @@ io.on("connection", (socket) => {
   });
 
 
+});
+// ✅ Cho phép truy cập các file tĩnh trong thư mục public
+app.use(express.static(path.join(process.cwd(), "public")));
 
+// ✅ Nếu người dùng truy cập domain chính, trả về file index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "public", "index.html"));
 });
 
 server.listen(3000, () => console.log("🚀 Server chạy tại http://localhost:3000"));
