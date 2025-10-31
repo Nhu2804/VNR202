@@ -1347,7 +1347,7 @@ socket.on("playerMoved", ({ id, x, y, dir }) => {
     if (dir) p.dir = dir;
     p.moving = true;
     clearTimeout(p._stopTimer);
-    p._stopTimer = setTimeout(() => p.moving = false, 200);
+    p._stopTimer = setTimeout(() => p.moving = false, 500);
   }
 });
 
