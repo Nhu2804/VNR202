@@ -399,11 +399,23 @@ function handleMovement(dt = 1) {
   me.moving = moved;
 
   if (moved) {
-    const radius = 8, margin = 2;
+    const radius = 6, margin = -2; // 👈 cho phép vượt nhẹ biên
     me.x = Math.max(radius + margin, Math.min(WORLD_WIDTH - radius - margin, me.x));
     me.y = Math.max(radius + margin, Math.min(WORLD_HEIGHT - radius - margin, me.y));
 
+    // 🚑 Thoát nếu dính biên
+    if (me.x <= radius + margin) me.x += 1;
+    if (me.x >= WORLD_WIDTH - radius - margin) me.x -= 1;
+    if (me.y <= radius + margin) me.y += 1;
+    if (me.y >= WORLD_HEIGHT - radius - margin) me.y -= 1;
+
+
     if (now - lastMoveEmit > 40) {
+      if (!moved) {
+        me.moving = false;
+        if (Object.values(keys).some(k => k)) keys = {}; // reset nếu phím bị kẹt
+      }
+
       lastMoveEmit = now;
       socket.emit("movePlayer", { pin: roomPin, x: me.x, y: me.y, dir: me.dir });
     }
@@ -712,6 +724,88 @@ function updateProgressBar(value) {
     // 🎆 Hiệu ứng pháo hoa + gọi showMapMeaning khi chữ biến mất
     singleFirework(`🎉 Hoàn thành giai đoạn ${giaiDoan}`, () => {
       console.log("✨ Pháo và chữ hoàn thành → Hiện bảng ý nghĩa");
+      if (currentMapName === "map2") {
+        // 🖼️ Hiển thị ảnh chiến thắng
+        const victoryImg = document.createElement("img");
+        victoryImg.src = "pictures/khangchienthanhcong.png"; // đường dẫn tương đối trong /public
+        Object.assign(victoryImg.style, {
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "70vw",
+          maxWidth: "1000px",
+          borderRadius: "15px",
+          boxShadow: "0 0 40px rgba(0,0,0,0.7)",
+          zIndex: 10001,
+          opacity: 0,
+          transition: "opacity 1s ease",
+        });
+        document.body.appendChild(victoryImg);
+        setTimeout(() => victoryImg.style.opacity = 1, 100);
+
+        // ⏳ Sau 3s → hiện huy hiệu
+        setTimeout(() => {
+          victoryImg.style.opacity = 0;
+          setTimeout(() => victoryImg.remove(), 1000);
+
+          // 🌟 Hiện khung huy hiệu
+          const badgeBox = document.createElement("div");
+          badgeBox.innerHTML = `
+            <h2 style="
+              color:#fff;
+              font-size:2.4rem;
+              text-align:center;
+              font-family:Quicksand,sans-serif;
+              text-shadow:0 0 15px #ffd700, 0 0 25px #ffa500;
+              animation:blink 1s infinite alternate;
+            ">Bạn nhận được huy hiệu<br>"Chiến sĩ Điện Biên Phủ"</h2>
+            <img src="pictures/Huy-hieu.png" style="
+              display:block;
+              margin:20px auto 0;
+              width:160px;
+              filter:drop-shadow(0 0 15px gold);
+              animation:sparkle 2s infinite ease-in-out;
+            ">
+          `;
+          Object.assign(badgeBox.style, {
+            position:"fixed",
+            top:"50%",
+            left:"50%",
+            transform:"translate(-50%,-50%)",
+            textAlign:"center",
+            zIndex:10002,
+            opacity:0,
+            transition:"opacity 1s ease",
+          });
+          document.body.appendChild(badgeBox);
+          setTimeout(()=>badgeBox.style.opacity=1,100);
+
+          // ✨ hiệu ứng CSS
+          const style = document.createElement("style");
+          style.textContent = `
+            @keyframes blink { from {opacity:1;} to {opacity:0.6;} }
+            @keyframes sparkle {
+              0% {transform:scale(1) rotate(0deg);}
+              50% {transform:scale(1.05) rotate(3deg);}
+              100% {transform:scale(1) rotate(0deg);}
+            }
+          `;
+          document.head.appendChild(style);
+
+          // ⏳ Sau 4s → ẩn huy hiệu và hiển thị ý nghĩa map
+          setTimeout(() => {
+            badgeBox.style.opacity = 0;
+            setTimeout(() => {
+              badgeBox.remove();
+              showMapMeaning(currentMapName);
+            }, 1000);
+          }, 4000);
+        }, 3000);
+
+        return; // tránh gọi showMapMeaning ngay lập tức
+      }
+
       showMapMeaning(currentMapName);
 
       // 🔹 Ẩn nút “Tiếp tục” với người chơi (chỉ host có)
@@ -999,6 +1093,7 @@ async function showMapMeaning(mapName) {
 
     // 🚫 7️⃣ Đóng băng điều khiển khi xem popup
     isPlayerFrozen = true;
+    keys = {};
 
   } catch (err) {
     console.error("❌ Lỗi khi tải map_meanings.json:", err);
@@ -1012,6 +1107,7 @@ async function showMapMeaning(mapName) {
 // ================= POPUPS & QUIZ =================
 function showInfoBox(t) {
   isPlayerFrozen = true;
+  keys = {};
   const infoBox = document.getElementById("infoBox");
   infoBox.classList.remove("hidden");
   document.getElementById("infoText").innerHTML = t.info.replace(/\n/g, "<br>");
@@ -1054,7 +1150,7 @@ function showQuiz(t) {
         showScorePopup();
 
         // 🧭 Tiến độ: rương bạc +5%, rương vàng +10%
-        const progressGain = t.type === "gold" ? 2 : 3;
+        const progressGain = t.type === "gold" ? 50 : 50;
         socket.emit("increaseProgress", { pin: roomPin, amount: progressGain });
 
       } else {
@@ -1068,6 +1164,7 @@ function showQuiz(t) {
       // ⏳ Đợi 1.0s rồi đóng câu hỏi
       setTimeout(() => {
         quizBox.classList.add("hidden");
+        keys = {};
         isPlayerFrozen = false;
       }, 1000);
     };
@@ -1248,7 +1345,7 @@ socket.on("switchMap2", () => {
   if (endScreen) endScreen.classList.add("hidden");
 
   switchToMap("map2");
-
+  keys = {};
   // ✅ Mở lại di chuyển sau khi sang map 2
   isPlayerFrozen = false;
 });
@@ -1465,10 +1562,12 @@ document.getElementById("playerNameInput").addEventListener("keydown", (e) => {
   }
 });
 
-
-
-
 document.getElementById("playAgainBtn")?.addEventListener("click", () => {
   document.body.classList.remove("show-leaderboard"); // 👈 gỡ class
   window.location.reload();
+});
+
+window.addEventListener("blur", () => {
+  keys = {};
+  console.log("[INFO] Reset toàn bộ phím (mất focus hoặc popup)");
 });
