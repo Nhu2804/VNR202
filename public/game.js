@@ -159,16 +159,19 @@ const menuMusic = document.getElementById("menuMusic");
 const gameMusic = document.getElementById("gameMusic");
 const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
+const fireworksSound = document.getElementById("fireworks");
 
 // Âm lượng
 menuMusic.volume = 0.5;
 gameMusic.volume = 0.5;
 correctSound.volume = 1.0;
 wrongSound.volume = 1.0;
+fireworksSound.volume = 0.6;
 
 // 🔁 Tự động lặp lại khi phát hết
 menuMusic.loop = true;
 gameMusic.loop = true;
+fireworksSound.loop = false;
 
 // 🟢 Phát nhạc menu ngay khi vào trang
 window.addEventListener("DOMContentLoaded", () => {
@@ -386,10 +389,11 @@ function handleMovement(dt = 1) {
 
   let moved = false;
 
-  if (keys["w"] || keys["W"]) { me.y -= speed; me.dir = "up"; moved = true; }
-  if (keys["s"] || keys["S"]) { me.y += speed; me.dir = "down"; moved = true; }
-  if (keys["a"] || keys["A"]) { me.x -= speed; me.dir = "left"; moved = true; }
-  if (keys["d"] || keys["D"]) { me.x += speed; me.dir = "right"; moved = true; }
+  if (keys["w"] || keys["W"] || keys["ArrowUp"]) { me.y -= speed; me.dir = "up"; moved = true; }
+  if (keys["s"] || keys["S"] || keys["ArrowDown"]) { me.y += speed; me.dir = "down"; moved = true; }
+  if (keys["a"] || keys["A"] || keys["ArrowLeft"]) { me.x -= speed; me.dir = "left"; moved = true; }
+  if (keys["d"] || keys["D"] || keys["ArrowRight"]) { me.x += speed; me.dir = "right"; moved = true; }
+
 
   me.moving = moved;
 
@@ -400,7 +404,7 @@ function handleMovement(dt = 1) {
 
     if (now - lastMoveEmit > 40) {
       lastMoveEmit = now;
-      socket.emit("movePlayer", { pin: roomPin, x: me.x, y: me.y });
+      socket.emit("movePlayer", { pin: roomPin, x: me.x, y: me.y, dir: me.dir });
     }
 
     checkTreasureCollision();
@@ -727,6 +731,16 @@ function updateProgressBar(value) {
 // 🎇 PHÁO HOA + CHỮ "HOÀN THÀNH GIAI ĐOẠN" → GỌI CALLBACK KHI XONG
 // ============================================================
 function singleFirework(titleText, onFinish) {
+
+    // 🎆 Phát âm thanh pháo hoa
+  try {
+    fireworksSound.currentTime = 0;
+    fireworksSound.play().catch(() => {});
+  } catch (err) {
+    console.warn("⚠️ Không phát được âm thanh pháo:", err);
+  }
+
+
   const canvas = document.createElement("canvas");
   Object.assign(canvas.style, {
     position: "fixed",
@@ -829,7 +843,13 @@ function singleFirework(titleText, onFinish) {
   }
 
   // 🧹 Xóa canvas sau 5s
-  setTimeout(() => canvas.remove(), 5000);
+  setTimeout(() => {
+    canvas.remove();
+    if (fireworksSound) {
+      fireworksSound.pause();
+      fireworksSound.currentTime = 0;
+    }
+  }, 5000);
 
   // ✨ Tạo chữ
   const textDiv = document.createElement("div");
@@ -991,7 +1011,7 @@ function showInfoBox(t) {
   isPlayerFrozen = true;
   const infoBox = document.getElementById("infoBox");
   infoBox.classList.remove("hidden");
-  document.getElementById("infoText").innerHTML = t.info;
+  document.getElementById("infoText").innerHTML = t.info.replace(/\n/g, "<br>");
   document.getElementById("quizBtn").onclick = () => {
     infoBox.classList.add("hidden");
     showQuiz(t);
@@ -1031,7 +1051,7 @@ function showQuiz(t) {
         showScorePopup();
 
         // 🧭 Tiến độ: rương bạc +5%, rương vàng +10%
-        const progressGain = t.type === "gold" ? 2 : 3;
+        const progressGain = t.type === "gold" ? 3 : 5;
         socket.emit("increaseProgress", { pin: roomPin, amount: progressGain });
 
       } else {
@@ -1315,11 +1335,20 @@ socket.on("endGame", (ranking) => {
 const positionBuffer = {};
 const INTERPOLATION_DELAY = 100; // ms trễ “an toàn”
 
-socket.on("playerMoved", ({ id, x, y }) => {
+socket.on("playerMoved", ({ id, x, y, dir }) => {
   if (id === socket.id) return; // bỏ qua chính mình
   if (!positionBuffer[id]) positionBuffer[id] = [];
   positionBuffer[id].push({ t: Date.now(), x, y });
   if (positionBuffer[id].length > 10) positionBuffer[id].shift();
+
+  // 🔥 Cập nhật hướng và bật animation
+  const p = players.find(p => p.id === id);
+  if (p) {
+    if (dir) p.dir = dir;
+    p.moving = true;
+    clearTimeout(p._stopTimer);
+    p._stopTimer = setTimeout(() => p.moving = false, 200);
+  }
 });
 
 // Mỗi frame, nội suy mượt giữa 2 vị trí gần nhất

@@ -283,7 +283,7 @@ io.on("connection", (socket) => {
     // }, 1000);
   });
 
-  socket.on("movePlayer", ({ pin, x, y }) => {
+  socket.on("movePlayer", ({ pin, x, y, dir }) => {
     const room = rooms[pin];
     if (!room) return;
     const player = room.players.find(p => p.id === socket.id);
@@ -291,15 +291,20 @@ io.on("connection", (socket) => {
 
     player.x = x;
     player.y = y;
+    if (dir) player.dir = dir; 
 
-    // 🆕 Nếu người này đang bị host theo dõi → không gửi lại cho host
-    if (room.followTarget === socket.id) {
-      socket.to(pin).emit("playerMoved", { id: player.id, x, y });
-    } else {
-      // Bình thường: gửi cho tất cả (bao gồm host)
-      socket.to(pin).emit("playerMoved", { id: player.id, x, y });
-    }
-  });
+    // 🧭 Gửi cho tất cả người chơi khác (bao gồm host)
+    socket.to(pin).emit("playerMoved", { id: player.id, x, y, dir }); // ✅ thêm dir
+});
+
+  //   // 🆕 Nếu người này đang bị host theo dõi → không gửi lại cho host
+  //   if (room.followTarget === socket.id) {
+  //     socket.to(pin).emit("playerMoved", { id: player.id, x, y });
+  //   } else {
+  //     // Bình thường: gửi cho tất cả (bao gồm host)
+  //     socket.to(pin).emit("playerMoved", { id: player.id, x, y });
+  //   }
+  // });
 
 
   socket.on("openTreasure", ({ pin, treasureId }) => {

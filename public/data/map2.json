@@ -1,7 +1,7 @@
 {
   "silver": [
     {
-      "info": "**Đại hội đại biểu toàn quốc lần thứ II của Đảng**\nThời gian: ngày 11 đến ngày 19/2/1951.\nĐịa điểm: xã Vinh Quang (nay là Kim Bình), huyện Chiêm Hóa, tỉnh Tuyên Quang.\nQuy mô: 158 đại biểu chính thức, 53 đại biểu dự khuyết, thay mặt cho hơn 766.000 đảng viên toàn Đảng.",
+      "info": "**Đại hội đại biểu toàn quốc lần thứ II của Đảng** họp từ **ngày 11 đến ngày 19-2-1951**, tại xã Vinh Quang (nay là Kim Bình), huyện Chiêm Hóa, tỉnh Tuyên Quang. Tham dự Đại hội có **158** đại biểu **chính thức**, **53** đại biểu **dự khuyết**, thay mặt cho hơn **766.000 đảng viên** toàn Đảng.",
       "question": "Đại hội đại biểu toàn quốc lần thứ II của Đảng diễn ra khi nào?",
       "options": [
         "11–19/2/1950",
@@ -12,8 +12,8 @@
       "correct": 1
     },
     {
-      "info": "**Đại hội đại biểu toàn quốc lần thứ II của Đảng**\nThời gian: ngày 11 đến ngày 19/2/1951.\nĐịa điểm: xã Vinh Quang (nay là Kim Bình), huyện Chiêm Hóa, tỉnh Tuyên Quang.\nQuy mô: 158 đại biểu chính thức, 53 đại biểu dự khuyết, thay mặt cho hơn 766.000 đảng viên toàn Đảng.",
-      "question": "Đại hội II có bao nhiêu đại biểu chính thức và dự khuyết?",
+      "info": "**Đại hội đại biểu toàn quốc lần thứ II của Đảng** họp từ **ngày 11 đến ngày 19-2-1951**, tại xã Vinh Quang (nay là Kim Bình), huyện Chiêm Hóa, tỉnh Tuyên Quang. Tham dự Đại hội có **158** đại biểu **chính thức**, **53** đại biểu **dự khuyết**, thay mặt cho hơn **766.000 đảng viên** toàn Đảng.",
+      "question": "Đại hội II có bao nhiêu đại biểu chính thức và đại biểu dự khuyết?",
       "options": [
         "158 chính thức, 53 dự khuyết",
         "100 chính thức, 50 dự khuyết ",
@@ -23,7 +23,7 @@
       "correct": 0
     },
     {
-      "info": "**Bối cảnh diễn ra Đại hội đại biểu toàn quốc lần thứ II của Đảng**:\n- **Liên Xô lớn mạnh về mọi mặt**, các nước XHCN ở châu Âu bước vào công cuộc xây dựng cơ sở vật chất cho CNXH.\n- **Nước Cộng hòa Nhân dân Trung Hoa ra đời (1/10/1949)** → làm tăng sức mạnh của lực lượng xã hội chủ nghĩa và các phong trào cách mạng toàn cầu, có lợi cho hòa bình và phong trào cách mạng.\n- **Mỹ trở thành tên sen đầm quốc tế**, tăng cường giúp đỡ Pháp can thiệp trực tiếp vào cuộc chiến tranh Đông Dương.\n- Cách mạng Lào và Campuchia cũng có **những chuyển biến tích cực**.\n- **Cuộc kháng chiến của nhân dân ta đã giành được nhiều thắng lợi quan trọng**.",
+      "info": "**Đại hội lần thứ hai của Đảng** được tiến hành trong bối cảnh **Liên Xô lớn mạnh vượt bậc** về mọi mặt, các nước xã hội chủ nghĩa ở **châu Âu** bước vào công cuộc **xây dựng cơ sở vật chất** cho chủ nghĩa xã hội. **Nước Cộng hòa Nhân dân Trung Hoa ra đời** làm thay đổi so sánh lực lượng có lợi cho hòa bình và phong trào cách mạng. **Mỹ** trở thành tên sen đầm quốc tế, tăng cường **giúp đỡ Pháp** can thiệp trực tiếp vào cuộc **chiến tranh Đông Dương**.",
       "question": "Bối cảnh quốc tế nào sau đây liên quan đến Đại hội II?",
       "options": [
         "Liên Xô suy yếu, Mỹ thống trị toàn cầu.",
@@ -34,7 +34,7 @@
       "correct": 3
     },
     {
-      "info": "**Đại hội đại biểu toàn quốc lần thứ II của Đảng quyết định**:\n- Do nhu cầu kháng chiến, giai cấp công nhân và nhân dân mỗi nước Việt Nam, Lào, Campuchia **cần có một đảng riêng**.\n- Ở Việt Nam, Đảng ra hoạt động công khai, lấy tên là **Đảng Lao động Việt Nam**.",
+      "info": "Theo sáng kiến của những người **cộng sản Việt Nam**, được những người **cộng sản Lào** và **Campuchia** nhất trí tán thành, **Đại hội quyết định**: Do nhu cầu kháng chiến, giai cấp công nhân và nhân dân mỗi nước **Việt Nam, Lào, Campuchia** cần có một **đảng riêng**. Ở **Việt Nam**, Đảng ra hoạt động công khai, lấy tên là **Đảng Lao động Việt Nam**.",
       "question": "Quyết định quan trọng của Đại hội II là gì?",
       "options": [
         "Thành lập Đảng Cộng sản Đông Dương.",
@@ -56,7 +56,7 @@
       "correct": 3
     },
     {
-      "info": "**Nội dung cơ bản của Chính cương của Đảng Lao động Việt Nam**:\n- Xác định tính chất của xã hội Việt Nam: **Dân chủ nhân dân, một phần thuộc địa, nửa phong kiến**. Cần giải quyết **mâu thuẫn chính**: **Chế độ dân chủ nhân dân với chủ nghĩa đế quốc xâm lược (Pháp, Mỹ) và phong kiến phản động**.\n- **Nhiệm vụ cách mạng**:\n  + **Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất**.\n  + **Xóa bỏ tàn tích phong kiến**.\n  + **Phát triển chế độ dân chủ nhân dân, đặt cơ sở cho chủ nghĩa xã hội**.\n  + **Nhiệm vụ trọng tâm: Chống xâm lược, hoàn thành giải phóng dân tộc.**\n- **Động lực của cách mạng**: Giai cấp công nhân, nông dân, tiểu tư sản và tư sản dân tộc; ngoài ra còn có thân sĩ yêu nước tiến bộ. Giai cấp công nhân lãnh đạo, liên minh với nông dân và lao động trí óc.\n- **Triển vọng phát triển của cách mạng**: Tiến lên chủ nghĩa xã hội qua các giai đoạn: giải phóng dân tộc; xóa tàn tích phong kiến, thực hiện “người cày có ruộng”, hoàn thiện dân chủ nhân dân; xây dựng cơ sở vật chất và tiến lên thực hiện chủ nghĩa xã hội.\n- **15 chính sách lớn**: Nhằm đẩy mạnh kháng chiến, kiến thiết quốc gia, thực hiện dân chủ nhân dân, làm tiền đề cho chủ nghĩa xã hội.",
+      "info": "**Nội dung cơ bản của Chính cương của Đảng Lao động Việt Nam**:\n- **Xác định tính chất của xã hội Việt Nam:** Dân chủ nhân dân, một phần thuộc địa, nửa phong kiến. Cần giải quyết **mâu thuẫn chính:** Chế độ dân chủ nhân dân với chủ nghĩa đế quốc xâm lược (Pháp, Mỹ) và phong kiến phản động.\n- **Nhiệm vụ cách mạng**:\n  + Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất.\n  + Xóa bỏ tàn tích phong kiến.\n  + Phát triển chế độ dân chủ nhân dân, đặt cơ sở cho chủ nghĩa xã hội.\n  + **Nhiệm vụ trọng tâm:** Chống xâm lược, hoàn thành giải phóng dân tộc.\n- **Động lực của cách mạng**: Giai cấp công nhân, nông dân, tiểu tư sản và tư sản dân tộc; ngoài ra còn có thân sĩ yêu nước tiến bộ. Giai cấp công nhân lãnh đạo, liên minh với nông dân và lao động trí óc.\n- **Triển vọng phát triển của cách mạng**: Tiến lên chủ nghĩa xã hội qua các giai đoạn: giải phóng dân tộc; xóa tàn tích phong kiến, thực hiện **\"người cày có ruộng\"**, hoàn thiện dân chủ nhân dân; xây dựng cơ sở vật chất và tiến lên thực hiện chủ nghĩa xã hội.\n- **15 chính sách lớn**: Nhằm đẩy mạnh kháng chiến, kiến thiết quốc gia, thực hiện dân chủ nhân dân, làm tiền đề cho chủ nghĩa xã hội.",
       "question": "Tính chất xã hội Việt Nam được xác định trong Chính cương của Đảng Lao động Việt Nam là gì?",
       "options": [
         "Xã hội chủ nghĩa hoàn toàn.",
@@ -67,7 +67,7 @@
       "correct": 1
     },
     {
-      "info": "**Nội dung cơ bản của Chính cương của Đảng Lao động Việt Nam**:\n- Xác định tính chất của xã hội Việt Nam: **Dân chủ nhân dân, một phần thuộc địa, nửa phong kiến**. Cần giải quyết **mâu thuẫn chính**: **Chế độ dân chủ nhân dân với chủ nghĩa đế quốc xâm lược (Pháp, Mỹ) và phong kiến phản động**.\n- **Nhiệm vụ cách mạng**:\n  + **Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất**.\n  + **Xóa bỏ tàn tích phong kiến**.\n  + **Phát triển chế độ dân chủ nhân dân, đặt cơ sở cho chủ nghĩa xã hội**.\n  + **Nhiệm vụ trọng tâm: Chống xâm lược, hoàn thành giải phóng dân tộc.**\n- **Động lực của cách mạng**: Giai cấp công nhân, nông dân, tiểu tư sản và tư sản dân tộc; ngoài ra còn có thân sĩ yêu nước tiến bộ. Giai cấp công nhân lãnh đạo, liên minh với nông dân và lao động trí óc.\n- **Triển vọng phát triển của cách mạng**: Tiến lên chủ nghĩa xã hội qua các giai đoạn: giải phóng dân tộc; xóa tàn tích phong kiến, thực hiện “người cày có ruộng”, hoàn thiện dân chủ nhân dân; xây dựng cơ sở vật chất và tiến lên thực hiện chủ nghĩa xã hội.\n- **15 chính sách lớn**: Nhằm đẩy mạnh kháng chiến, kiến thiết quốc gia, thực hiện dân chủ nhân dân, làm tiền đề cho chủ nghĩa xã hội.",
+      "info": "**Nội dung cơ bản của Chính cương của Đảng Lao động Việt Nam**:\n- **Xác định tính chất của xã hội Việt Nam:** Dân chủ nhân dân, một phần thuộc địa, nửa phong kiến. Cần giải quyết **mâu thuẫn chính:** Chế độ dân chủ nhân dân với chủ nghĩa đế quốc xâm lược (Pháp, Mỹ) và phong kiến phản động.\n- **Nhiệm vụ cách mạng**:\n  + Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất.\n  + Xóa bỏ tàn tích phong kiến.\n  + Phát triển chế độ dân chủ nhân dân, đặt cơ sở cho chủ nghĩa xã hội.\n  + **Nhiệm vụ trọng tâm:** Chống xâm lược, hoàn thành giải phóng dân tộc.\n- **Động lực của cách mạng**: Giai cấp công nhân, nông dân, tiểu tư sản và tư sản dân tộc; ngoài ra còn có thân sĩ yêu nước tiến bộ. Giai cấp công nhân lãnh đạo, liên minh với nông dân và lao động trí óc.\n- **Triển vọng phát triển của cách mạng**: Tiến lên chủ nghĩa xã hội qua các giai đoạn: giải phóng dân tộc; xóa tàn tích phong kiến, thực hiện **\"người cày có ruộng\"**, hoàn thiện dân chủ nhân dân; xây dựng cơ sở vật chất và tiến lên thực hiện chủ nghĩa xã hội.\n- **15 chính sách lớn**: Nhằm đẩy mạnh kháng chiến, kiến thiết quốc gia, thực hiện dân chủ nhân dân, làm tiền đề cho chủ nghĩa xã hội.",
       "question": "Động lực chính của cách mạng Việt Nam theo Chính cương là gì?",
       "options": [
         "Giai cấp công nhân, nông dân, tiểu tư sản, tư sản dân tộc, và thân sĩ yêu nước",
@@ -78,7 +78,7 @@
       "correct": 0
     },
     {
-      "info": "**Ý nghĩa và hạn chế của Đại hội II**:\n- Là **“Đại hội kháng chiến kiến quốc”**, thúc đẩy kháng chiến thắng lợi và xây dựng Đảng.\n- **Hạn chế**: Tư tưởng **“tả” khuynh, giáo điều**, **rập khuôn lý luận Stalin và Mao Trạch Đông** làm nền tảng tư tưởng.",
+      "info": "**Đại hội II** thành công là một **bước tiến mới** của **Đảng** về mọi mặt, là **\"Đại hội kháng chiến kiến quốc\"**, \"thúc đẩy kháng chiến đến thắng lợi hoàn toàn và xây dựng **Đảng Lao động Việt Nam**\" Tuy nhiên, Đại hội cũng có **hạn chế**, khuyết điểm về nhận thức là mắc vào tư tưởng **\"tả\" khuynh**, **giáo điều**, **rập khuôn máy móc**, đưa cả lý luận **Xtalin**, tưởng **Mao Trạch Đông** vào làm \"nền tảng tư tưởng và kim chỉ nam cho mọi hành động của Đảng\".",
       "question": "Hạn chế của Đại hội II là gì?",
       "options": [
         "Thiếu đoàn kết quốc tế.",
@@ -90,7 +90,7 @@
     },
 
     {
-      "info": "**Chính sách cải cách ruộng đất (1953)**:\n- Đảng chủ trương **giảm tô, giảm tức**, **tiến tới cải cách ruộng đất** để thúc đẩy kháng chiến và thực hiện **“người cày có ruộng”**.\n- **Tạm cấp gần 180.000 ha ruộng đất** cho bần nông, cố nông, trung nông lớp dưới từ ruộng của thực dân, địa chủ Việt gian, ruộng công, hoang hóa.\n- **Hội nghị Ban Chấp hành Trung ương (1/1953, 11/1953)** và **Hội nghị toàn quốc lần thứ nhất** thông qua **Cương lĩnh ruộng đất với 23 điều**, nhấn mạnh **giảm tô, giảm tức, cải cách ruộng đất**.\n- **Quốc hội khóa I (12/1953)** thông qua **Luật cải cách ruộng đất**; **Hồ Chí Minh ký sắc lệnh (19/12/1953)**.\n- **Kết quả**: Phân chia hàng ngàn ha ruộng đất, nông cụ, trâu bò cho nông dân nghèo, cải thiện đời sống, thúc đẩy sản xuất, động viên lực lượng cho **Chiến dịch Điện Biên Phủ**.\n- **Hạn chế**: Giáo điều, độc đoán, quan liêu, xử lý oan sai trong cải cách ruộng đất.",
+      "info": "Từ **đầu năm 1953**, **Đảng** chủ trương **đẩy mạnh** thực hiện các **cải cách dân chủ**, phát động quần chúng nông dân triệt để **giảm tô, giảm tức** tiến tới cải cách ruộng đất nhằm góp phần **thúc đẩy kháng chiến** mau thắng lợi, thực hiện mục tiêu **người cày có ruộng**. Nông dân đã được **tạm cấp** gần **180.000 héc ta** ruộng đất vốn là của thực dân, địa chủ Việt gian, ruộng công, ruộng hoang hóa, vắng chủ.",
       "question": "Mục tiêu chính của chính sách cải cách ruộng đất năm 1953 là gì?",
       "options": [
         "Phát triển công nghiệp.",
@@ -101,7 +101,7 @@
       "correct": 2
     },
     {
-      "info": "**Chính sách cải cách ruộng đất (1953)**:\n- Đảng chủ trương **giảm tô, giảm tức**, **tiến tới cải cách ruộng đất** để thúc đẩy kháng chiến và thực hiện **“người cày có ruộng”**.\n- **Tạm cấp gần 180.000 ha ruộng đất** cho bần nông, cố nông, trung nông lớp dưới từ ruộng của thực dân, địa chủ Việt gian, ruộng công, hoang hóa.\n- **Hội nghị Ban Chấp hành Trung ương (1/1953, 11/1953)** và **Hội nghị toàn quốc lần thứ nhất** thông qua **Cương lĩnh ruộng đất với 23 điều**, nhấn mạnh **giảm tô, giảm tức, cải cách ruộng đất**.\n- **Quốc hội khóa I (12/1953)** thông qua **Luật cải cách ruộng đất**; **Hồ Chí Minh ký sắc lệnh (19/12/1953)**.\n- **Kết quả**: Phân chia hàng ngàn ha ruộng đất, nông cụ, trâu bò cho nông dân nghèo, cải thiện đời sống, thúc đẩy sản xuất, động viên lực lượng cho **Chiến dịch Điện Biên Phủ**.\n- **Hạn chế**: Giáo điều, độc đoán, quan liêu, xử lý oan sai trong cải cách ruộng đất.",
+      "info": "**Tháng 11-1953**, Hội nghị Ban Chấp hành Trung ương Đảng lần thứ năm và Hội nghị toàn quốc của Đảng lần thứ nhất quyết nghị thông qua **Cương lĩnh ruộng đất** của **Đảng Lao động Việt Nam** với **23 điều** và nêu chủ trương: “phát động quần chúng triệt để giảm tô, thực hiện giảm tức và tiến hành cải cách ruộng đất”, thực hiện người cày có ruộng, nâng cao quyền lợi **kinh tế và chính trị** của người nông dân.",
       "question": "Hội nghị nào thông qua Cương lĩnh ruộng đất với 23 điều?",
       "options": [
         "Hội nghị Ban Chấp hành Trung ương lần thứ ba (4/1952)",
@@ -112,7 +112,7 @@
       "correct": 1
     },
     {
-      "info": "**Chính sách cải cách ruộng đất (1953)**:\n- Đảng chủ trương **giảm tô, giảm tức**, **tiến tới cải cách ruộng đất** để thúc đẩy kháng chiến và thực hiện **“người cày có ruộng”**.\n- **Tạm cấp gần 180.000 ha ruộng đất** cho bần nông, cố nông, trung nông lớp dưới từ ruộng của thực dân, địa chủ Việt gian, ruộng công, hoang hóa.\n- **Hội nghị Ban Chấp hành Trung ương (1/1953, 11/1953)** và **Hội nghị toàn quốc lần thứ nhất** thông qua **Cương lĩnh ruộng đất với 23 điều**, nhấn mạnh **giảm tô, giảm tức, cải cách ruộng đất**.\n- **Quốc hội khóa I (12/1953)** thông qua **Luật cải cách ruộng đất**; **Hồ Chí Minh ký sắc lệnh (19/12/1953)**.\n- **Kết quả**: Phân chia hàng ngàn ha ruộng đất, nông cụ, trâu bò cho nông dân nghèo, cải thiện đời sống, thúc đẩy sản xuất, động viên lực lượng cho **Chiến dịch Điện Biên Phủ**.\n- **Hạn chế**: Giáo điều, độc đoán, quan liêu, xử lý oan sai trong cải cách ruộng đất.",
+      "info": "**Ngày 4-12-1953**, tại kỳ họp thứ 3, **Quốc hội khóa I** đã thông qua **Luật cải cách ruộng đất** và ngày **19-12-1953**, Chủ tịch Hồ Chí Minh đã ký ban hành sắc lệnh Luật cải cách ruộng đất. Thực hiện chủ trương của Đảng và Chính phủ **hàng ngàn hécta ruộng đất** và **các loại nông cụ, trâu bò, tư liệu sản xuất nông nghiệp** đã được chia cho nông dân nghèo, nhất là bần, cố nông. Thắng lợi này đã làm nức lòng bộ đội nơi tiền tuyến, tăng thêm **quyết tâm giết giặc**, lập công, góp phần tích cực **động viên** sức người, sức của cho **Chiến dịch Điện Biên Phủ**...",
       "question": "Kết quả quan trọng của cải cách ruộng đất năm 1953 là gì?",
       "options": [
         "Phân chia hàng ngàn ha ruộng đất, nông cụ, trâu bò cho nông dân nghèo",
@@ -123,7 +123,7 @@
       "correct": 0
     },
     {
-      "info": "**Chính sách cải cách ruộng đất (1953)**:\n- Đảng chủ trương **giảm tô, giảm tức**, **tiến tới cải cách ruộng đất** để thúc đẩy kháng chiến và thực hiện **“người cày có ruộng”**.\n- **Tạm cấp gần 180.000 ha ruộng đất** cho bần nông, cố nông, trung nông lớp dưới từ ruộng của thực dân, địa chủ Việt gian, ruộng công, hoang hóa.\n- **Hội nghị Ban Chấp hành Trung ương (1/1953, 11/1953)** và **Hội nghị toàn quốc lần thứ nhất** thông qua **Cương lĩnh ruộng đất với 23 điều**, nhấn mạnh **giảm tô, giảm tức, cải cách ruộng đất**.\n- **Quốc hội khóa I (12/1953)** thông qua **Luật cải cách ruộng đất**; **Hồ Chí Minh ký sắc lệnh (19/12/1953)**.\n- **Kết quả**: Phân chia hàng ngàn ha ruộng đất, nông cụ, trâu bò cho nông dân nghèo, cải thiện đời sống, thúc đẩy sản xuất, động viên lực lượng cho **Chiến dịch Điện Biên Phủ**.\n- **Hạn chế**: Giáo điều, độc đoán, quan liêu, xử lý oan sai trong cải cách ruộng đất.",
+      "info": "Do còn **hạn chế** trong nhận thức, việc tiếp thu kinh nghiệm **đấu tranh giai cấp** của nước ngoài đã mắc vào **giáo điều chủ nghĩa**, vi phạm khuyết điểm **nghiêm trọng** là độc đoán, chuyên quyền, định kiến chủ quan, quan liêu, mệnh lệnh, nhất là ở phương pháp, cách làm, ở việc chỉ đạo xử lý không đúng một số trường hợp **oan sai** trong cải cách ruộng đất, **càng về sau càng nặng hơn**...",
       "question": "Hạn chế của cải cách ruộng đất năm 1953 là gì?",
       "options": [
         "Không phân chia đủ đất cho nông dân",
@@ -134,7 +134,7 @@
       "correct": 1
     },
     {
-      "info": "**Tình hình quân sự Pháp và Kế hoạch Navarre (1953)**:\n- Quân Pháp mắc kẹt trong mâu thuẫn chiến lược (tập trung binh lực, tiến công, phòng ngự).\n- Pháp lệ thuộc viện trợ Mỹ, tìm lối thoát danh dự.\n- Đại tướng **Henri Navarre** được cử làm Tổng chỉ huy quân Pháp ở Đông Dương (5/1953), đề ra **Kế hoạch Navarre**: tập trung binh lực, tạo “quả đấm thép” để đánh bại Việt Minh, biến Điện Biên Phủ thành tập đoàn cứ điểm mạnh nhất Đông Dương.",
+      "info": "**Tháng 5-1953**, Pháp cử **Đại tướng H. Navarre (Hăngri Nava)** đang đảm nhiệm chức vụ **Tổng Tham mưu trưởng lục quân khối NATO** sang làm **Tổng chỉ huy quân đội viễn chinh Pháp** ở Đông Dương. **Tháng 7-1953**, Nava đã vạch ra kế hoạch chính trị-quân sự mới lấy tên là **\"Kế hoạch Nava\"**. Kế hoạch Nava **dự kiến thực hiện** trong vòng **18 tháng** nhằm **\"chuyển bại thành thắng\"**. Nava chủ trương tăng cường **tập trung binh lực**, hình thành những **\"quả đấm thép\"** để quyết chiến với chủ lực của **Việt Minh**. Chi phí vật chất của kế hoạch Nava phần lớn do **Mỹ** thực hiện. Trong quá trình triển khai kế hoạch, Nava đã từng bước biến **Điện Biên Phủ** - một địa danh vùng Tây Bắc Việt Nam trở thành một** căn cứ quân sự khổng lồ** và là **trung tâm điểm** của kế hoạch",
       "question": "Kế hoạch Navarre của Pháp (1953) nhằm mục tiêu gì?",
       "options": [
         "Rút quân khỏi Đông Dương.",
@@ -167,7 +167,7 @@
       "correct": 1
     },
     {
-      "info": "**Chiến dịch Điện Biên Phủ (13/3–7/5/1954)**:\n- Quân ta tập trung **50.000** quân, bao vây Điện Biên Phủ, áp dụng phương châm **“đánh chắc, tiến chắc”**.\n- Qua **56 ngày đêm**, **3 đợt tiến công**, ngày 7/5/1954, quân ta chiếm hầm chỉ huy, **bắt sống tướng De Castries**, **tiêu diệt toàn bộ lực lượng địch**.\n- **Chiến thắng Điện Biên Phủ** là đỉnh cao của Tiến công chiến lược Đông Xuân, **kết thúc thắng lợi kháng chiến chống Pháp**.",
+      "info": "Với phương châm **\"đánh chắc, tiến chắc\"**, **\"đánh chắc thắng\"**, ngày **13-3-1954**, quân ta **nổ súng tấn công** địch ở phân khu **phía Bắc** trung tâm Mường Thanh, mở màn **Chiến dịch Điện Biên Phủ**. Trải qua **56 ngày đêm**, với **3 đợt tiến công lớn**, vào hồi **17 giờ 30 phút chiều 7-5-1954**, Quân đội nhân dân Việt Nam đã đánh chiếm hầm chỉ huy, bắt sống tướng Chiristian de Castries (Đờ Cátơri) chỉ huy trưởng và Bộ chỉ huy tập đoàn cứ điểm Điện Biên Phủ. Toàn bộ lực lượng địch ở Điện Biên Phủ bị tiêu diệt và bị bắt sống. Chiến dịch Điện Biên Phủ kết thúc đã đưa cuộc Tiến công chiến lược **Đông Xuân 1953-1954** và cuộc kháng chiến của **dân tộc Việt Nam** chống thực dân Pháp xâm lược đến **thắng lợi vẻ vang**.",
       "question": "Chiến dịch Điện Biên Phủ kết thúc vào ngày nào?",
       "options": [
         "7/5/1954",
@@ -178,7 +178,7 @@
       "correct": 0
     },
     {
-      "info": "**Ý nghĩa Chiến thắng Điện Biên Phủ**:\n- Thể hiện ý chí, khát vọng độc lập, tự do của nhân dân Việt Nam.\n- Là thảm bại lớn của Pháp, báo hiệu sự sụp đổ của chủ nghĩa thực dân.\n- Là chiến công vĩ đại, ghi dấu trong lịch sử thế giới, cổ vũ các dân tộc bị áp bức.",
+      "info": "Thắng lợi ở Điện Biên Phủ là **\"thiên sử vàng của dân tộc Việt Nam\"**, được ghi nhận là một **chiến công vĩ đại** của dân tộc **Việt Nam** trong **thế kỷ XX** và “đi vào lịch sử thế giới như một chiến công hiển hách, báo hiệu sự thắng lợi của nhân dân các dân tộc bị áp bức, sự sụp đổ của chủ nghĩa thực dân”.",
       "question": "Ý nghĩa quan trọng nhất của Chiến thắng Điện Biên Phủ là gì?",
       "options": [
         "Mở rộng căn cứ địa Tây Bắc.",
@@ -209,12 +209,23 @@
         "Công nhận độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Việt Nam, Lào, Campuchia."
       ],
       "correct": 3
+    },
+    {
+      "info": "**Các báo cáo tại Đại hội II (2/1951):**\n- **Diễn văn khai mạc** của **Tôn Đức Thắng**.\n- **Báo cáo chính trị** của **Chủ tịch Hồ Chí Minh**.\n- **Báo cáo “Hoàn thành giải phóng dân tộc, phát triển dân chủ nhân dân, tiến tới chủ nghĩa xã hội”** của **Trường Chinh**.\n- **Báo cáo về tổ chức và Điều lệ Đảng** của **Lê Văn Lương**.",
+      "question": "Tại Đại hội II (2/1951), ai trình bày báo cáo “Hoàn thành giải phóng dân tộc, phát triển dân chủ nhân dân, tiến tới chủ nghĩa xã hội”?",
+      "options": [
+        "Hồ Chí Minh",
+        "Trường Chinh",
+        "Lê Văn Lương",
+        "Tôn Đức Thắng"
+      ],
+      "correct": 1
     }
 
   ],
   "gold": [
     {
-      "info": "Nhận thức được lợi ích của **Cách mạng công nghiệp lần thứ tư**, Đảng và Nhà nước ta đã có định hướng xây dựng chính sách và chương trình để chủ động tham gia, nhấn mạnh tới **ứng dụng và phát triển khoa học - công nghệ, đổi mới sáng tạo, nâng cao chất lượng nguồn nhân lực**. \n\nCụ thể: **Nghị quyết số 23-NQ/TW ngày 22/3/2018** của Bộ Chính trị về định hướng xây dựng chính sách phát triển công nghiệp quốc gia đến năm 2030, tầm nhìn đến năm 2045 nhấn mạnh *“khai thác triệt để thành tựu của cuộc Cách mạng công nghiệp lần thứ 4.”*\n\nNguồn: [Quyết định 2289/QĐ-TTg/2020 – Chiến lược quốc gia về Cách mạng công nghiệp lần thứ tư đến 2030](https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Quyet-dinh-2289-QD-TTg-2020-Chien-luoc-quoc-gia-ve-Cach-mang-cong-nghiep-lan-thu-tu-den-2030-461337.aspx)",
+      "info": "Nhận thức được lợi ích của **Cách mạng công nghiệp lần thứ tư**, Đảng và Nhà nước ta đã có định hướng xây dựng chính sách và chương trình để chủ động tham gia, nhấn mạnh tới **ứng dụng và phát triển khoa học - công nghệ, đổi mới sáng tạo, nâng cao chất lượng nguồn nhân lực**. \n\nCụ thể: **Nghị quyết số 23-NQ/TW ngày 22/3/2018** của Bộ Chính trị về định hướng xây dựng chính sách phát triển công nghiệp quốc gia đến năm 2030, tầm nhìn đến năm 2045 nhấn mạnh **“khai thác triệt để thành tựu của cuộc Cách mạng công nghiệp lần thứ 4.”**",
       "question": "Chiến thắng Điện Biên Phủ (1954) thể hiện ý chí “đánh chắc, tiến chắc”. Trong bối cảnh phát triển kinh tế số hiện nay, nguyên tắc này có thể được áp dụng như thế nào?",
       "options": [
         "Đầu tư ồ ạt vào công nghệ mà chưa có hạ tầng.",
@@ -225,7 +236,7 @@
       "correct": 1
     },
     {
-      "info": "Phát biểu tại **phiên họp Chính phủ chuyên đề xây dựng pháp luật tháng 11/2021**, Thủ tướng **Phạm Minh Chính** nhấn mạnh cần **ưu tiên cao nhất cho công tác xây dựng và hoàn thiện thể chế** để phục vụ 3 khâu đột phá chiến lược, trên cơ sở bám sát **Nghị quyết Đại hội XIII của Đảng**, đẩy mạnh phân cấp, phân quyền, tăng cường công khai, minh bạch, tháo gỡ các vướng mắc pháp lý.\n\nNguồn: [Báo Chính phủ](https://baochinhphu.vn/chinh-phu-uu-tien-cao-nhat-cho-xay-dung-va-hoan-thien-the-che-tang-cuong-cong-khai-minh-bach-102304072.htm)",
+      "info": "Phát biểu tại **phiên họp Chính phủ chuyên đề xây dựng pháp luật tháng 11/2021**, Thủ tướng **Phạm Minh Chính** nhấn mạnh cần **ưu tiên cao nhất cho công tác xây dựng và hoàn thiện thể chế** để phục vụ 3 khâu đột phá chiến lược, trên cơ sở bám sát **Nghị quyết Đại hội XIII của Đảng**, đẩy mạnh phân cấp, phân quyền, tăng cường công khai, minh bạch, tháo gỡ các vướng mắc pháp lý.",
       "question": "Đại hội II (1951) quyết định Đảng ra hoạt động công khai với tên Đảng Lao động Việt Nam. Ngày nay, việc minh bạch, công khai trong quản lý nhà nước có vai trò gì?",
       "options": [
         "Giúp tăng cường niềm tin, chống tham nhũng và phát triển bền vững.",
@@ -236,7 +247,7 @@
       "correct": 0
     },
     {
-      "info": "Định hướng phát triển nhóm sản phẩm chủ lực quốc gia tập trung vào **xây dựng vùng sản xuất hàng hóa quy mô lớn**, **ứng dụng tiêu chuẩn sản xuất bền vững (VietGAP, GlobalGAP)**, **số hóa vùng trồng, vùng nuôi**, và **hỗ trợ doanh nghiệp, nông dân phát triển thương hiệu quốc gia**.\n\nNguồn: [Cổng thông tin Chính phủ](https://vanban.chinhphu.vn/?pageid=27160&docid=205277)",
+      "info": "Định hướng phát triển nhóm sản phẩm chủ lực quốc gia tập trung vào **xây dựng vùng sản xuất hàng hóa quy mô lớn**, **ứng dụng tiêu chuẩn sản xuất bền vững (VietGAP, GlobalGAP)**, **số hóa vùng trồng, vùng nuôi**, và **hỗ trợ doanh nghiệp, nông dân phát triển thương hiệu quốc gia**.",
       "question": "Cải cách ruộng đất (1953) nhằm thực hiện “người cày có ruộng” để động viên nông dân. Trong phát triển nông thôn mới hiện nay, chính sách nào tương đồng về mục tiêu?",
       "options": [
         "Thu hồi đất nông nghiệp để xây khu công nghiệp.",
@@ -247,7 +258,7 @@
       "correct": 1
     },
     {
-      "info": "Nghị quyết số 36-NQ/TW (22/10/2018) xác định cần **xây dựng lực lượng vũ trang chính quy, tinh nhuệ, hiện đại**, ưu tiên hiện đại hóa lực lượng bảo vệ biển; **tăng cường thế trận quốc phòng toàn dân gắn với an ninh nhân dân trên biển**; đồng thời **kết hợp đấu tranh ngoại giao, pháp lý quốc tế**, chủ động hợp tác quốc tế để bảo vệ **chủ quyền biển đảo**.\n\nNguồn: [Tư liệu văn kiện Đảng Cộng sản Việt Nam](https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-36-nqtw-ngay-22102018-hoi-nghi-lan-thu-tam-ban-chap-hanh-trung-uong-dang-khoa-xii-ve-chien-luoc-phat-trien-ben-4810)",
+      "info": "Nghị quyết số 36-NQ/TW (22/10/2018) xác định cần **xây dựng lực lượng vũ trang chính quy, tinh nhuệ, hiện đại**, ưu tiên hiện đại hóa lực lượng bảo vệ biển; **tăng cường thế trận quốc phòng toàn dân gắn với an ninh nhân dân trên biển**; đồng thời **kết hợp đấu tranh ngoại giao, pháp lý quốc tế**, chủ động hợp tác quốc tế để bảo vệ **chủ quyền biển đảo**.",
       "question": "Hội nghị Geneva (1954) là kết quả của đấu tranh ngoại giao kết hợp quân sự. Trong quan hệ quốc tế hiện nay, Việt Nam nên áp dụng chiến lược nào để bảo vệ chủ quyền biển đảo?",
       "options": [
         "Chỉ dựa vào sức mạnh quân sự.",
@@ -258,7 +269,7 @@
       "correct": 1
     },
     {
-      "info": "Chiến lược bảo đảm **an ninh lương thực quốc gia đến năm 2030** đặt mục tiêu **tổ chức lại sản xuất nông nghiệp theo hướng cơ giới hóa, tự động hóa**, tăng cường **liên kết chuỗi giá trị**, ứng dụng **khoa học – công nghệ, thích ứng biến đổi khí hậu**, và **sử dụng bền vững tài nguyên đất, nước**.\n\nNguồn: [Văn phòng Chính phủ](https://vpcp.chinhphu.vn/bao-dam-an-ninh-luong-thuc-quoc-gia-den-nam-2030-11525147.htm)",
+      "info": "Chiến lược bảo đảm **an ninh lương thực quốc gia đến năm 2030** đặt mục tiêu **tổ chức lại sản xuất nông nghiệp theo hướng cơ giới hóa, tự động hóa**, tăng cường **liên kết chuỗi giá trị**, ứng dụng **khoa học – công nghệ, thích ứng biến đổi khí hậu**, và **sử dụng bền vững tài nguyên đất, nước**.",
       "question": "Phong trào tăng gia sản xuất, tự túc lương thực trong kháng chiến giúp chi viện cho Điện Biên Phủ. Trong bối cảnh biến đổi khí hậu hiện nay, bài học này gợi ý điều gì cho an ninh lương thực Việt Nam?",
       "options": [
         "Tăng nhập khẩu gạo để giảm áp lực canh tác.",
