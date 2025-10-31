@@ -167,7 +167,7 @@ function respawnSingleTreasure(existingTreasures = [], mapName = "map1") {
     const y = PADDING + Math.random() * (WORLD_HEIGHT - 2 * PADDING);
     const tooClose = existingTreasures.some(t => Math.hypot(t.x - x, t.y - y) < MIN_DISTANCE);
     if (!tooClose) {
-      const isGold = Math.random() < 0.35;
+      const isGold = Math.random() < 0.25;
       const q = (isGold ? gold : silver)[Math.floor(Math.random() * (isGold ? gold.length : silver.length))];
       return { id: crypto.randomUUID(), type: isGold ? "gold" : "silver", x, y, opened: false, ...q };
     }
@@ -350,6 +350,7 @@ io.on("connection", (socket) => {
       correct: q.correct,
       points: isGold ? 20 : 10,
     });
+    
 
     // 🔁 Sau 3s hồi sinh rương (nhưng câu hỏi không reset)
     setTimeout(() => {
@@ -467,11 +468,14 @@ export default app;
 const PORT = process.env.PORT || 3000;
 
 if (process.env.VERCEL) {
-  // Vercel sẽ tự quản lý serverless — không listen()
+  // ✅ Vercel sẽ tự quản lý serverless — không listen()
   console.log("✅ Running inside Vercel serverless environment");
 } else {
-  // Local hoặc Render (production thật) sẽ cần listen()
+  // ✅ Local hoặc Render sẽ chạy server thật
+  const LOCAL_URL = `http://localhost:${PORT}`;
   server.listen(PORT, "0.0.0.0", () => {
-    console.log(`🚀 Server đang chạy tại cổng ${PORT}`);
+    console.log(`🚀 Server đang chạy tại: ${LOCAL_URL}`);
   });
 }
+
+

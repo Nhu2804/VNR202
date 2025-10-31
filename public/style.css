@@ -280,18 +280,53 @@ body.page-lobby .card {
   margin-top: 20px;
 }
 
+/* =========================================================
+   ✨ PHƯƠNG ÁN 3: PHONG CÁCH "NGỌC LỤC BẢO & CỔ VẬT"
+========================================================= */
+
+/* --- Tiêu đề "Người chơi" mang phong cách điêu khắc đá --- */
 #players-container h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  
+  /* Màu xanh rêu sẫm, màu của những tảng đá cổ */
+  color: #2E4B3E; 
+  text-align: center;
+  
+  margin: 0 auto 30px;
+  padding-bottom: 15px;
+  
+  /* Đường kẻ màu đồng cổ, tạo cảm giác như một cổ vật */
+  border-bottom: 3px solid #A98B5B;
+  width: 80%;
+  
+  /* Bóng đổ tinh tế để tạo chiều sâu cho chữ */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+/* --- Huy hiệu đếm số người chơi như một viên ngọc lục bảo --- */
 #player-count {
-  background-color: var(--success-color);
-  color: white;
-  padding: 2px 10px;
-  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  
+  /* Nền gradient xanh ngọc lục bảo sáng bóng */
+  background: linear-gradient(145deg, #34A853, #2C7D43);
+  color: #FFFFFF; /* Chữ trắng nổi bật trên nền xanh */
+  
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
+  font-weight: 700;
+  
+  padding: 6px 14px;
+  border-radius: 20px;
+  min-width: 20px;
+  
+  /* Viền bằng đồng cổ và hiệu ứng nổi khối */
+  border: 2px solid #A98B5B; /* Cùng màu với đường kẻ của tiêu đề */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 
+              inset 0 1px 2px rgba(255,255,255,0.4); /* Tạo ánh sáng lấp lánh trên bề mặt ngọc */
 }
 
 #players-list {
@@ -301,7 +336,7 @@ body.page-lobby .card {
   justify-content: center;
   min-height: 50px;
   padding: 10px;
-  background-color: #e9d8b9;
+ 
   border-radius: 8px;
 }
 
@@ -1413,7 +1448,7 @@ body.page-lobby #players-container h3 {
   gap: 12px;
   align-items: flex-start;
   min-height: 150px;
-  background-color: rgba(223, 205, 169, 0.5);
+
   border-radius: 8px;
   padding: 15px;
 }
@@ -1695,3 +1730,24 @@ body.page-game .film-strip-banner {
 }
 
 
+/* ========================================= */
+/* 🎯 CHO PHÉP CUỘN TOÀN TRANG Ở CHẾ ĐỘ BXH */
+/* ========================================= */
+
+body.show-leaderboard {
+  overflow-y: auto;              /* body cầm scrollbar */
+}
+
+body.show-leaderboard #ui-container {
+  height: auto;                  /* bỏ giới hạn 100vh */
+  min-height: 100vh;
+  overflow: visible;             /* để cuộn toàn bộ */
+  justify-content: flex-start;   /* nội dung cuộn từ trên xuống */
+  padding-top: 6vh;
+  padding-bottom: 8vh;
+}
+
+html, body {
+  height: auto;
+  min-height: 100%;
+}

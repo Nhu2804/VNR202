@@ -699,8 +699,7 @@ function updateProgressBar(value) {
     console.log(`🎯 Hoàn thành ${currentMapName} (${giaiDoan})`);
 
     // 🌑 Hiển thị lớp mờ (ổn định)
-    const fade = document.getElementById("fade-overlay");
-    if (fade) fade.classList.add("visible");
+    showOverlay();
 
     // 📡 Host gửi tín hiệu để tất cả người chơi cùng hiện lớp mờ
     if (isHost) socket.emit("broadcastShowFade", { pin: roomPin });
@@ -1194,10 +1193,33 @@ socket.on("showQuestion", (data) => {
   showInfoBox(data); // hàm có sẵn hiển thị câu hỏi
 });
 
+// 🧩 Hiển thị / Ẩn lớp mờ với hiệu ứng mượt
+function showOverlay() {
+  const fade = document.getElementById("fade-overlay");
+  if (fade) {
+    fade.classList.add("visible");
+    fade.style.transition = "opacity 0.8s ease";
+    fade.style.opacity = 1;
+    fade.style.pointerEvents = "auto";
+  }
+}
+
+function hideOverlay() {
+  const fade = document.getElementById("fade-overlay");
+  if (fade) {
+    fade.classList.remove("visible");
+    fade.style.transition = "opacity 0.8s ease";
+    fade.style.opacity = 0;
+    fade.style.pointerEvents = "none";
+  }
+}
+
+
 socket.on("switchMap2", () => {
   console.log("🧭 Nhận tín hiệu sang Map 2 từ host!");
   progressPercent = 0;
   updateProgressBar(0);
+  hideOverlay();
 
   const endScreen = document.getElementById("map-end-screen");
   if (endScreen) endScreen.classList.add("hidden");
@@ -1219,6 +1241,7 @@ socket.on("endGame", (ranking) => {
   // ✅ Ẩn bảng ý nghĩa nếu còn mở
   const endScreen = document.getElementById("map-end-screen");
   if (endScreen) endScreen.classList.add("hidden");
+  hideOverlay();
 
   // 🎵 Âm nhạc & trạng thái
   gameMusic.pause();
@@ -1413,3 +1436,7 @@ document.getElementById("playerNameInput").addEventListener("keydown", (e) => {
 
 
 
+document.getElementById("playAgainBtn")?.addEventListener("click", () => {
+  document.body.classList.remove("show-leaderboard"); // 👈 gỡ class
+  window.location.reload();
+});
