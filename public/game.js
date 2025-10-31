@@ -1147,10 +1147,10 @@ function showQuiz(t) {
 
         // 💫 Hiển thị hiệu ứng cộng điểm
         spawnScoreFloat(`+${gained}`);
-        showScorePopup();
+        // showScorePopup();
 
         // 🧭 Tiến độ: rương bạc +5%, rương vàng +10%
-        const progressGain = t.type === "gold" ? 50 : 50;
+        const progressGain = t.type === "gold" ? 2 : 3;
         socket.emit("increaseProgress", { pin: roomPin, amount: progressGain });
 
       } else {
@@ -1173,37 +1173,45 @@ function showQuiz(t) {
   });
 }
 
-// 💫 Tạo hiệu ứng +10 điểm nổi lên
-function spawnScoreFloat(text) {
+// 💫 Hiệu ứng + điểm nổi cạnh ô 💎
+function spawnScoreFloat(text = "+10") {
   const floatEl = document.createElement("div");
   floatEl.className = "score-float";
   floatEl.textContent = text;
 
-  // Lấy vị trí ô “Điểm: ...”
+  // Lấy vị trí ô điểm
   const hud = document.getElementById("hud-score");
   const rect = hud.getBoundingClientRect();
 
-  // 📍 Đặt ngay dưới ô điểm (trung tâm)
-  floatEl.style.left = rect.left + rect.width / 2 - 20 + "px";
-  floatEl.style.top = rect.bottom + 5 + "px";
+  // ✅ Đặt ở bên PHẢI hoặc TRÊN ô điểm, tùy không gian
+  // Căn theo kích thước viewport để tránh tràn
+  const margin = 8;
+  const floatLeft = Math.min(rect.right + margin, window.innerWidth - 80);
+  const floatTop = Math.max(rect.top - 10, 10);
+
+  floatEl.style.position = "fixed";
+  floatEl.style.left = floatLeft + "px";
+  floatEl.style.top = floatTop + "px";
+  floatEl.style.zIndex = 99999;
 
   document.body.appendChild(floatEl);
 
-  // ⏳ Hiệu ứng bay lên và biến mất
+  // ⏳ Hiệu ứng bay lên & biến mất
   setTimeout(() => floatEl.remove(), 2000);
 }
 
 
 
-function showScorePopup() {
-    const popup = document.getElementById('score-popup');
-    popup.classList.remove('hidden');
-    popup.classList.add('show');
-    setTimeout(() => {
-        popup.classList.remove('show');
-        setTimeout(() => popup.classList.add('hidden'), 500);
-    }, 800);
-}
+
+// function showScorePopup() {
+//     const popup = document.getElementById('score-popup');
+//     popup.classList.remove('hidden');
+//     popup.classList.add('show');
+//     setTimeout(() => {
+//         popup.classList.remove('show');
+//         setTimeout(() => popup.classList.add('hidden'), 500);
+//     }, 800);
+// }
 
 // ================= SOCKET EVENTS =================
 socket.on("updatePlayers", (list) => {

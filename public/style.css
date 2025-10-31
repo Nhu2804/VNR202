@@ -885,6 +885,7 @@ body.is-player #leaderboardPanel {
   text-shadow: 0 0 15px #ffd700;
   opacity: 0;
   transition: all 0.8s ease-out;
+  z-index: 99999;
 }
 #score-popup.show {
   opacity: 1;
@@ -1750,4 +1751,32 @@ body.show-leaderboard #ui-container {
 html, body {
   height: auto;
   min-height: 100%;
+}
+.score-float {
+  position: fixed;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 10px #ffcc00, 0 0 25px #ffa500;
+  opacity: 0;
+  transform: translateY(0);
+  animation: floatUp 1.2s ease-out forwards;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
 }
