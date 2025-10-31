@@ -10,6 +10,7 @@ const chestSilver = new Image();
 chestSilver.src = "chest/chest_silver.png";
 chestGold.onload = () => console.log("✅ Rương vàng đã load!");
 chestSilver.onload = () => console.log("✅ Rương bạc đã load!");
+let autoNextTimer = null; // 🕒 Dùng để huỷ auto-next khi host bấm
 
 
 // 🧭 CAMERA KHỞI TẠO
@@ -961,13 +962,14 @@ async function showMapMeaning(mapName) {
     if (mapData.nextAction === "nextMap2") {
       // 🎯 Khi host bấm tiếp tục
       continueBtn.onclick = () => {
+        if (autoNextTimer) clearTimeout(autoNextTimer);
         hidePopup();
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
         socket.emit("hostContinueMap2", roomPin);
       };
 
       // ⏳ Tự động sau 60 giây
-      setTimeout(() => {
+      autoNextTimer = setTimeout(() => {
         console.log("⏳ Tự động sang Map 2 sau 60s");
         hidePopup();
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
@@ -978,6 +980,7 @@ async function showMapMeaning(mapName) {
     else if (mapData.nextAction === "endGame") {
       // 🎯 Khi host bấm hoàn thành
       continueBtn.onclick = () => {
+        if (autoNextTimer) clearTimeout(autoNextTimer);
         hidePopup();
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
         socket.emit("hostEndGame", roomPin);
@@ -985,7 +988,7 @@ async function showMapMeaning(mapName) {
       };
 
       // ⏳ Tự động sau 60 giây
-      setTimeout(() => {
+      autoNextTimer = setTimeout(() => {
         console.log("⏳ Tự động kết thúc game sau 60s");
         hidePopup();
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
@@ -1051,7 +1054,7 @@ function showQuiz(t) {
         showScorePopup();
 
         // 🧭 Tiến độ: rương bạc +5%, rương vàng +10%
-        const progressGain = t.type === "gold" ? 3 : 5;
+        const progressGain = t.type === "gold" ? 2 : 3;
         socket.emit("increaseProgress", { pin: roomPin, amount: progressGain });
 
       } else {
