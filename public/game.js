@@ -414,7 +414,7 @@ function checkTreasureCollision() {
     for (const t of treasures) {
       if (!t.opened && Math.abs(me.x - t.x) < 25 && Math.abs(me.y - t.y) < 25) {
         socket.emit("openTreasure", { pin: roomPin, treasureId: t.id });
-        showInfoBox(t);
+       
         break;
       }
     }
