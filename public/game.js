@@ -1068,7 +1068,7 @@ async function showMapMeaning(mapName) {
         hidePopup();
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
         socket.emit("hostContinueMap2", roomPin);
-      }, 60000);
+      }, 100000);
     }
 
     else if (mapData.nextAction === "endGame") {
@@ -1088,7 +1088,7 @@ async function showMapMeaning(mapName) {
         socket.emit("broadcastHideEndScreen", { pin: roomPin });
         socket.emit("hostEndGame", roomPin);
         socket.emit("hostShowLeaderboard", roomPin);
-      }, 60000);
+      }, 100000);
     }
 
     // 🚫 7️⃣ Đóng băng điều khiển khi xem popup

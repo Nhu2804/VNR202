@@ -1769,14 +1769,15 @@ html, body {
 @keyframes floatUp {
   0% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(20px); /* Bắt đầu thấp hơn */
   }
   80% {
     opacity: 1;
-    transform: translateY(-25px);
+    transform: translateY(-5px);
   }
   100% {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(-20px);
   }
 }
+
