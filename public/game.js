@@ -711,7 +711,7 @@ function updateProgressBar(value) {
   if (progressPercent >= 100) {
     let giaiDoan = "";
     if (currentMapName === "map1") giaiDoan = "1946–1950";
-    else if (currentMapName === "map2") giaiDoan = "1950–1954";
+    else if (currentMapName === "map2") giaiDoan = "1951–1954";
 
     console.log(`🎯 Hoàn thành ${currentMapName} (${giaiDoan})`);
 
