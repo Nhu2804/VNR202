@@ -1150,7 +1150,7 @@ function showQuiz(t) {
         // showScorePopup();
 
         // 🧭 Tiến độ: rương bạc +5%, rương vàng +10%
-        const progressGain = t.type === "gold" ? 3 : 2;
+        const progressGain = t.type === "gold" ? 10 : 9;
         socket.emit("increaseProgress", { pin: roomPin, amount: progressGain });
 
       } else {
